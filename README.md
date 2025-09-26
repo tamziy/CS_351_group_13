@@ -24,18 +24,16 @@
 # Communication  
 
 **Q3a:** How can your group communicate when doing the Full Stack Group Project?  
-**Q3b:** What are the usernames of each group member on that platform?  
-**Q3c:** What is your group’s expected response time to messages?  
-
-**Example:**  
 *We will use Discord for communication. We have already set up a discord group for texting/online meetings.*  
 
-*Usernames:*  
-*Tam Le - ghostmechanic*  
+**Q3b:** What are the usernames of each group member on that platform?  
+*Name - Username*  
+*Tam Le - tamziy*  
 *Trenton - Trenton*  
-*Ayush - kingyushi*  
-*Rohan - Rohan*  
+*Ayush Patel - kingyushi*  
+*Rohan Jawale - Rohan*  
 
+**Q3c:** What is your group’s expected response time to messages?  
 *Everyone is expected to respond to messages ASAP if urgent, but regularly 12 hrs is fine.*
 
 ---
@@ -64,6 +62,7 @@
 # Tech Stacks
 
 **Q6:** Which tech stacks will your group use? (Django + React or Flask + React)
+*We decided to use React for the frontend, and Flask for backend.
 
 ---
 # Full Stack Group Project Track  
@@ -112,17 +111,22 @@
 ## Third-Party API Integration
 
 **Q3: Which third-party API(s) will you integrate into your project? What data will you pull from the API(s), and how will you use it in your application?**
+*We are thinking of using Firebase Authentication as one of our third-party API. We will pull user authentication data from Firebase Authentication to securely manage sign-up, login, and session tracking.*
+
+
 
 **Q4: Does your API key has limitations such as rate limits or downtime? How are you going to deal with that?**
 
 ## Authentication and Security
 
 **Q5: What authentication method will you use (e.g., username/password, OAuth, JWT)?**
+*As stated from above, we are going to us Firebase Authentication for secure username/password-based logins.*
 
 **Q6: How will you store and protect sensitive user data (e.g., passwords, tokens)?**
 
 ## Deployment
 
 **Q7: Where will you deploy your project (e.g., Heroku, AWS, Render)? How will you manage environment variables and secrets during deployment?**
+*Currently, we are strongly considering using AWS to deploy our project. We will manage environemntal variables by using it on an EC2 instance's environment or ultilizing AWS Secrets Manager.*
 
 **Q8: How will you ensure your deployment is reliable and easy to update?**
