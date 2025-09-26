@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# CS_351_group_13
-=======
 # Logistics  
 
 **Q1:** At what time in the week would your group be available to meet online?  
@@ -31,13 +28,15 @@
 **Q3c:** What is your group’s expected response time to messages?  
 
 **Example:**  
-*We will use Discord for communication*  
+*We will use Discord for communication. We have already set up a discord group for texting/online meetings.*  
 
 *Usernames:*  
-*Justin - ghostmechanic*  
-*Claudia - ninth.py*  
-*Mauricio - itsperi*  
-*Our expected response time will be within 12 hours.*  
+*Tam Le - ghostmechanic*  
+*Trenton - Trenton*  
+*Ayush - kingyushi*  
+*Rohan - Rohan*  
+
+*Everyone is expected to respond to messages ASAP if urgent, but regularly 12 hrs is fine.*
 
 ---
 
@@ -127,4 +126,3 @@
 **Q7: Where will you deploy your project (e.g., Heroku, AWS, Render)? How will you manage environment variables and secrets during deployment?**
 
 **Q8: How will you ensure your deployment is reliable and easy to update?**
->>>>>>> 1f0ed8dbd3d02cd08152c6665db0ca5198ab7ba7
