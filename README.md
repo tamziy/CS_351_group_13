@@ -44,10 +44,9 @@
 **Q4b:** How will your group handle situations when a member is not contributing enough?  
 
 **Example:**  
-*If there is a disagreement on direction, we will resolve it with a unanimous vote.*  
-*If team members do not pull their weight, the team will politely remind them of their duties.*  
-*If they continue to not pull their weight, then they will get another warning and a chance to start being more productive.*  
-
+*If there is conflict, we will meet up and discuss and resolve the conflict. Conflict can also be just misunderstanding.*
+*If a student believes another student is not pulling their weight, or if there is any difficulty working together, they must bring it up so that we can resolve it ASAP. Resolving team issues early prevents it from going out of control.*
+*We will be using Jira to split responsibilities and agree on each person's duty beforehand, allowing clarity and avoiding a team member underworking or overworking.* 
 ---
 
 # Roles  
@@ -78,8 +77,10 @@
 # Track 2: Technology for Public Goods 
 
 **Problem 2:**
+*As, a UIC student, it can be very tedious and difficult to plan out your next semester and what classes you should take. Class description on the UIC website is very outdated. As a student, you need to go to reddit, student discord servers, and even ask around to get the most up to date information for every single class you are interested in taking. You may also want to balance the difficulty of each semester based on your current situation. E.g. this semester you're also working part time and want to more relax semester. You would then have to go to uicgrades.com or ratemyproffesor to gauge how difficult the class you're interested in taking could be.*
 
 **Solution 2:** 
+*A UIC Classes Wikipedia for students that acts as a one stop shop for all the information students need to plan out their next semester informed and with confidence. The wikipedia will be updated by UIC students who took the class beforehand. They can write descriptions, add comments, and even be able to converse with other students on classes. Each class will have its own dedicated page that will also include the grade distribution of previous semesters and which professors have taught it in the past.*
 
 **Problem 3:** 
 
@@ -99,6 +100,8 @@
 # Idea Finalization
 
 **From 5 project ideas you have above, please choose one of the project that you are going with for the rest of the semester. Explain why you are going with that project**
+
+*We are going to work on the UIC Class Wikipedia for students.*
 
 # Extra Credit (Only do this if you are done with Idea Finalization)
 
