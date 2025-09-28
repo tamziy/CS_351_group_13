@@ -101,7 +101,7 @@
 
 **From 5 project ideas you have above, please choose one of the project that you are going with for the rest of the semester. Explain why you are going with that project**
 
-*We are going to work on the UIC Class Wikipedia for students.*
+*We are going to work on the UIC Class Wikipedia for students. We believe that this will provide the most value to the UIC community, and we can easily get users who will find a lot of value in this project. We already had some meetings and really fleshed out this idea as well.*
 
 # Extra Credit (Only do this if you are done with Idea Finalization)
 
