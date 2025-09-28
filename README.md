@@ -88,17 +88,17 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 ---
 
 # Track 1: Tackling Generative AI Consequences
-**Problem 1:** 
+**Problem 1:** A common problem during this decade has been how AI apps are keeping people's data secure. Large AI models often take in users' data and manage connections with third-party apps to discover more about the user than was previiously known to them. This is especially a concern of older populations 
 
-**Solution 1:** 
+**Solution 1:** Our solution is to build a lightweight LLM app that filters incoming requests and monitors connections to AI models in the web browser. The LLM is localized to respect the individual user, and trained to summarize user-AI relationships at the base level. 
 
 ---
 
 # Track 2: Technology for Public Goods 
 
-**Problem 2:**
+**Problem 2:** Students choosing the right classes and professors each semester are one of the most important aspects of college. It's crucial to plan the difficulty of each semester based on your current coursework, skill level, and personal circumstances. But having to jump from site to site, catalog to Reddit, can take away from the simplicity of knowing what classes you want.
 
-**Solution 2:** 
+**Solution 2:** Our solution is to create an interactive class wiki for UIC. The aim is for the wiki to be a "one stop shop" for finding information about classes that synthesizes current resources such as uicgrades, RateMyProfessor, and Reddit. This app will focus on CS classes to begin with, and may also host advanced visual elements such as prerequisite class trees, decorated ratings, and relevant media iFrames.
 
 **Problem 3:** 
 
@@ -137,10 +137,10 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 
 **Q5: What authentication method will you use (e.g., username/password, OAuth, JWT)?**
 
-**Q6: How will you store and protect sensitive user data (e.g., passwords, tokens)?**
+**Q6: How will you store and protect sensitive user data (e.g., passwords, tokens)?** The APIs we use should be listed in .env files and ignored outright from public commits via .gitignore. Additionally, any tokens we use should be processed through GitHub, accessible through all members, and managed locally, if need be.
 
 ## Deployment
 
 **Q7: Where will you deploy your project (e.g., Heroku, AWS, Render)? How will you manage environment variables and secrets during deployment?**
 
-**Q8: How will you ensure your deployment is reliable and easy to update?**
+**Q8: How will you ensure your deployment is reliable and easy to update?** During the latter phases of user testing and final revisions, we will periodically monitor our live deployment through AWS dashboards.
