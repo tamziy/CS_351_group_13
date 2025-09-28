@@ -5,7 +5,7 @@
 *We are available to meet online on weekends from 12pm-8pm (12-2pm Saturday + Sunday), as well as from 4pm-6pm on Fridays.*  
 *Our weekly meeting will be Thursday 11am-12pm.*  
 
-*testtttt*
+Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8pm
 
 ---
 
@@ -20,6 +20,26 @@
 *Prior to 4/17: Meet together weekly to target project weakpoints/bugs and possibly visit office hours to get guidance if the progress feels weak.*  
 
 ---
+
+9/25 - Intial meeting, decide on Project Idea, set up Jira-GitHub-Figma, decide roles for Milestone 2
+
+10/2 - Completing Milestone 2, outlining Python and initial data structures for project, beginning prototype mockups & user flow (UI/UX)
+
+10/9 - Finishing project mockup, starting work on frontend/backend, data collection for project site
+
+10/16 - Adding data to project site, building out Flask webpages, hooking up backend/API access, outlining initial data structures to use
+
+10/23 - Revising frontend/backend after peer review, consider "sprint" workflow
+
+10/30 - Backend API set, data collection finished, reestablishing UX guidelines
+
+11/6 - Improving code efficiency, space/time complexity, cleaning up code to finish frontend/backend work
+
+11/13 - Running early user testing, polishing frontend and backend
+
+11/20 - Creating presentation guide, final testing and additonal review
+
+12/4 - Deploying and submitting Full-Stack project, presenting in class
 
 # Communication  
 
@@ -68,9 +88,9 @@
 ---
 
 # Track 1: Tackling Generative AI Consequences
-**Problem 1:** 
+**Problem 1:** A common problem during this decade has been how AI apps are keeping people's data secure. Large AI models often take in users' data and manage connections with third-party apps to discover more about the user than was previiously known to them. This is especially a concern of older populations 
 
-**Solution 1:** 
+**Solution 1:** Our solution is to build a lightweight LLM app that filters incoming requests and monitors connections to AI models in the web browser. The LLM is localized to respect the individual user, and trained to summarize user-AI relationships at the base level. 
 
 ---
 
@@ -80,7 +100,7 @@
 *As, a UIC student, it can be very tedious and difficult to plan out your next semester and what classes you should take. Class description on the UIC website is very outdated. As a student, you need to go to reddit, student discord servers, and even ask around to get the most up to date information for every single class you are interested in taking. You may also want to balance the difficulty of each semester based on your current situation. E.g. this semester you're also working part time and want to more relax semester. You would then have to go to uicgrades.com or ratemyproffesor to gauge how difficult the class you're interested in taking could be.*
 
 **Solution 2:** 
-*A UIC Classes Wikipedia for students that acts as a one stop shop for all the information students need to plan out their next semester informed and with confidence. The wikipedia will be updated by UIC students who took the class beforehand. They can write descriptions, add comments, and even be able to converse with other students on classes. Each class will have its own dedicated page that will also include the grade distribution of previous semesters and which professors have taught it in the past.*
+*Our solution is a UIC Classes Wikipedia for students that acts as a one stop shop for all the information students need to plan out their next semester informed and with confidence. The wikipedia will be updated by UIC students who took the class beforehand. They can write descriptions, add comments, and even be able to converse with other students on classes. Each class will have its own dedicated page that will also include the grade distribution of previous semesters and which professors have taught it in the past, with links to RateMyProfessor.The app will focus on CS classses, but may expand to include other classes as well. It may also have other features, including an interactive flowchart for students to mark what classes they already took. The flowchart can also recommend what classes to take based on the classes the user already took as well.
 
 **Problem 3:** 
 
@@ -125,11 +145,11 @@
 **Q5: What authentication method will you use (e.g., username/password, OAuth, JWT)?**
 *As stated from above, we are going to us Firebase Authentication for secure username/password-based logins.*
 
-**Q6: How will you store and protect sensitive user data (e.g., passwords, tokens)?**
+**Q6: How will you store and protect sensitive user data (e.g., passwords, tokens)?** The APIs we use should be listed in .env files and ignored outright from public commits via .gitignore. Additionally, any tokens we use should be processed through GitHub, accessible through all members, and managed locally, if need be.
 
 ## Deployment
 
 **Q7: Where will you deploy your project (e.g., Heroku, AWS, Render)? How will you manage environment variables and secrets during deployment?**
 *Currently, we are strongly considering using AWS to deploy our project. We will manage environemntal variables by using it on an EC2 instance's environment or ultilizing AWS Secrets Manager.*
 
-**Q8: How will you ensure your deployment is reliable and easy to update?**
+**Q8: How will you ensure your deployment is reliable and easy to update?** During the latter phases of user testing and final revisions, we will periodically monitor our live deployment through AWS dashboards.
