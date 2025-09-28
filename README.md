@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# CS_351_group_13
-=======
 # Logistics  
 
 **Q1:** At what time in the week would your group be available to meet online?  
@@ -23,6 +20,26 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 *Prior to 4/17: Meet together weekly to target project weakpoints/bugs and possibly visit office hours to get guidance if the progress feels weak.*  
 
 ---
+
+9/25 - Intial meeting, decide on Project Idea, set up Jira-GitHub-Figma, decide roles for Milestone 2
+
+10/2 - Completing Milestone 2, outlining Python and initial data structures for project, beginning prototype mockups & user flow (UI/UX)
+
+10/9 - Finishing project mockup, starting work on frontend/backend, data collection for project site
+
+10/16 - Adding data to project site, building out Flask webpages, hooking up backend/API access, outlining initial data structures to use
+
+10/23 - Revising frontend/backend after peer review, consider "sprint" workflow
+
+10/30 - Backend API set, data collection finished, reestablishing UX guidelines
+
+11/6 - Improving code efficiency, space/time complexity, cleaning up code to finish frontend/backend work
+
+11/13 - Running early user testing, polishing frontend and backend
+
+11/20 - Creating presentation guide, final testing and additonal review
+
+12/4 - Deploying and submitting Full-Stack project, presenting in class
 
 # Communication  
 
@@ -127,4 +144,3 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 **Q7: Where will you deploy your project (e.g., Heroku, AWS, Render)? How will you manage environment variables and secrets during deployment?**
 
 **Q8: How will you ensure your deployment is reliable and easy to update?**
->>>>>>> 1f0ed8dbd3d02cd08152c6665db0ca5198ab7ba7
