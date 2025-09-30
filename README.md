@@ -61,7 +61,9 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 # Norms  
 
 **Q4a:** How will your group handle situations when there is conflict in your group?  
+*Our group will handle situations when there is a conflict in our group by communicating with each other on Discord and on our online meeting. We will make sure the everyone is on the same page and figure out how to resolve the conflict. 
 **Q4b:** How will your group handle situations when a member is not contributing enough?  
+* Our group will handle situations when a member is not contributing enough by contacting that member and ensuring that they need to complete their part of the work that was assigned to them. We will each have assigned parts of the group project and will be responsible to complete them by a certain deadline that will be set by us. This will be done by using Jira to ensure that every member understands what needs to be done by when. If the member isn't contributing because they are struggling with their part, we will make sure to help them in order to motivate that member to contribute to their part.
 
 **Example:**  
 *If there is conflict, we will meet up and discuss and resolve the conflict. Conflict can also be just misunderstanding.*
@@ -72,6 +74,7 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 # Roles  
 
 **Q5:** How will your group divide your role in the Group Project?  
+*Tam - , Trenton - , Rohan - , Ayush - 
 
 **Example:**  
 *Mauricio - Backend, Justin - Project Lead, Claudia - Frontend.*  
@@ -103,8 +106,10 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 *Our solution is a UIC Classes Wikipedia for students that acts as a one stop shop for all the information students need to plan out their next semester informed and with confidence. The wikipedia will be updated by UIC students who took the class beforehand. They can write descriptions, add comments, and even be able to converse with other students on classes. Each class will have its own dedicated page that will also include the grade distribution of previous semesters and which professors have taught it in the past, with links to RateMyProfessor.The app will focus on CS classses, but may expand to include other classes as well. It may also have other features, including an interactive flowchart for students to mark what classes they already took. The flowchart can also recommend what classes to take based on the classes the user already took as well.
 
 **Problem 3:** 
+*In the computer science field, one of the main things when getting a job is the technical interviews, therefore, it's important to practice the process of a technical interview. At UIC, there isn't a way for UIC CS students to practice technical interviews with each other. While there are external websites and applications such as Pramper for CS students to practice technical interviews with students from other colleges and professionals in the computer science field, there isn't a specific application for UIC CS students. It would be better if UIC CS students practice technical interviews with each other because UIC CS students have an idea of what they learned from taking the same classes, so each student would have an idea of what that student knows about the question. Not having this type of application results in not having enough resources for UIC CS students to prepare for technical interviews. 
 
 **Solution 3:**  
+*Our solution is a UIC CS Technical Interview Prep application for UIC CS students where they can practice technical interviews with each other. UIC CS students will be able to join an online session, via Zoom, to interview each other one-on-one. There will also be a rubric that the student who is interviewing the other student will fill out during the interview. The rubric will consist of categories that are scored in a technical interview, in which the person being interviewed will recieve the rubric after the interview. There will be certain technical questions that are seperated by questions that might be asked by certain companies. There will be other features within the application that will help with UIC CS students in finding a job/internship, such as a job board and an announcements page. 
 
 # Track 3: Creative Coding and Cultural Expression
 
