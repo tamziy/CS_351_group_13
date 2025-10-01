@@ -8,7 +8,7 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 # Timeline: Weekly Meeting Goals  
 
 **Q2:** What is your goals that your group want to achieve in each weekly meeting?  
-9/25 - Intial meeting, decide on Project Idea, set up Jira-GitHub-Figma, decide roles for Milestone 2
+9/25 - Initial meeting, decide on Project Idea, set up Jira-GitHub-Figma, decide roles for Milestone 2
 
 10/2 - Completing Milestone 2, outlining Python and initial data structures for project, beginning prototype mockups & user flow (UI/UX)
 
@@ -57,7 +57,7 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 # Roles  
 
 **Q5:** How will your group divide your role in the Group Project?  
-*Tam - , Trenton - , Rohan - , Ayush - 
+*Tam - Backend, Trenton - Project Manager/Frontend, Rohan - Backend, Ayush - Frontend
 
 ---
 
@@ -80,7 +80,7 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 # Track 2: Technology for Public Goods 
 
 **Problem 2:**
-*As, a UIC student, it can be very tedious and difficult to plan out your next semester and what classes you should take. Class description on the UIC website is very outdated. As a student, you need to go to reddit, student discord servers, and even ask around to get the most up to date information for every single class you are interested in taking. You may also want to balance the difficulty of each semester based on your current situation. E.g. this semester you're also working part time and want to more relax semester. You would then have to go to uicgrades.com or ratemyproffesor to gauge how difficult the class you're interested in taking could be.*
+*As, a UIC student, it can be very tedious and difficult to plan out your next semester and what classes you should take. Class description on the UIC website is very outdated. As a student, you need to go to reddit, student discord servers, and even ask around to get the most up to date information for every single class you are interested in taking. You may also want to balance the difficulty of each semester based on your current situation. E.g. this semester you're also working part time and want to more relaxed semester. You would then have to go to uicgrades.com or ratemyproffesor to gauge how difficult the class you're interested in taking could be.*
 
 **Solution 2:** 
 *Our solution is a UIC Classes Wikipedia for students that acts as a one stop shop for all the information students need to plan out their next semester informed and with confidence. The wikipedia will be updated by UIC students who took the class beforehand. They can write descriptions, add comments, and even be able to converse with other students on classes. Each class will have its own dedicated page that will also include the grade distribution of previous semesters and which professors have taught it in the past, with links to RateMyProfessor.The app will focus on CS classses, but may expand to include other classes as well. It may also have other features, including an interactive flowchart for students to mark what classes they already took. The flowchart can also recommend what classes to take based on the classes the user already took as well.
@@ -89,18 +89,21 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 *In the computer science field, one of the main things when getting a job is the technical interviews, therefore, it's important to practice the process of a technical interview. At UIC, there isn't a way for UIC CS students to practice technical interviews with each other. While there are external websites and applications such as Pramper for CS students to practice technical interviews with students from other colleges and professionals in the computer science field, there isn't a specific application for UIC CS students. It would be better if UIC CS students practice technical interviews with each other because UIC CS students have an idea of what they learned from taking the same classes, so each student would have an idea of what that student knows about the question. Not having this type of application results in not having enough resources for UIC CS students to prepare for technical interviews. 
 
 **Solution 3:**  
-*Our solution is a UIC CS Technical Interview Prep application for UIC CS students where they can practice technical interviews with each other. UIC CS students will be able to join an online session, via Zoom, to interview each other one-on-one. There will also be a rubric that the student who is interviewing the other student will fill out during the interview. The rubric will consist of categories that are scored in a technical interview, in which the person being interviewed will recieve the rubric after the interview. There will be certain technical questions that are seperated by questions that might be asked by certain companies. There will be other features within the application that will help with UIC CS students in finding a job/internship, such as a job board and an announcements page. 
+*Our solution is a UIC CS Technical Interview Prep application for UIC CS students where they can practice technical interviews with each other. UIC CS students will be able to join an online session, via Zoom, to interview each other one-on-one. There will also be a rubric that the student who is interviewing the other student will fill out during the interview. The rubric will consist of categories that are scored in a technical interview, in which the person being interviewed will receive the rubric after the interview. There will be certain technical questions that are seperated by questions that might be asked by certain companies. There will be other features within the application that will help with UIC CS students in finding a job/internship, such as a job board and an announcements page. 
 
 # Track 3: Creative Coding and Cultural Expression
 
 **Idea - Story - Inspiration 4:**
+*Chicago has a very long, deep and meaningful history of music, art and food, but the majority of Chicago residents haven't explored much of this beyond a few major landmarks. This art has a deep reflection of the city's history as a whole and needs to be kept alive, especially since we are living in it. 
 
 **Implementation 4:**
+*Our solution is an interactive application that uses a map of Chicago to display local pieces of art, locally owned food spots, and smaller music venues. When users click on a specific location, they will be given a general overview of whatever they clicked on as well as photos and a brief history of it. Users would also be able to add their own pictures and descriptions, showcasing their own photos and art, adding to the history and culture of Chicago. 
 
 **Idea - Story - Inspiration 5:**
+*My parents were born in India, and while I was born in America, they shared many very important holidays and traditions. I grew up celebrating colorful, culturally rich holidays such as Holi, Diwali and Raksha Bandhan. However, coming to Chicago and being away from my family resulted in a slight distance from this culture. I often miss holidays and don't know when they happen. Even when I do, I have no way to celebrate unless I visit home, which I don't always have time for. 
 
 **Implementation 5:**
-
+*Our solution would be to build a digital calendar app focused on Indian holidays to help students, or just any residents stay connected to their cultural traditions and holidays. The app would feature major holidays such as Holi, Diwali, and Raksha Bandhan, showing their dates each year. The app could also send reminders before each holiday, or suggest ways to celebrate while away from home. A feature could be to allow users to share their own stories or photos, as well as local celebrations for people to join in and celebrate together.*
 
 # Idea Finalization
 
@@ -113,9 +116,10 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 ## Database Design
 
 **Q1: What database are you using for your project (SQLite, PostgreSQL, noSQL, MongoDB,...), and why do you choose it?**
+*We are considering using a noSQL database, specifically DynamoDB. We chose is because it is easily scalable, accommodating for any variety of content types we may choose to store in our UIC Class Wikipedia, as well as supporting any growth or changes in the future.*
 
 **Q2: How will database be helpful to your project? How will you design your database to support your application features?**
-
+*We will use the database to store all of our information about each class such as student comments, professors, grade distribution, etc. Our database will have the class or class key as its unique key, each storing its respective information. Due to DynamoDB's flexible schema, we can add new content over time if we choose to expand our features.*
 ## Third-Party API Integration
 
 **Q3: Which third-party API(s) will you integrate into your project? What data will you pull from the API(s), and how will you use it in your application?**
@@ -135,6 +139,6 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 ## Deployment
 
 **Q7: Where will you deploy your project (e.g., Heroku, AWS, Render)? How will you manage environment variables and secrets during deployment?**
-*Currently, we are strongly considering using AWS to deploy our project. We will manage environemntal variables by using it on an EC2 instance's environment or ultilizing AWS Secrets Manager.*
+*Currently, we are strongly considering using AWS to deploy our project. We will manage environmntal variables by using it on an EC2 instance's environment or ultilizing AWS Secrets Manager.*
 
 **Q8: How will you ensure your deployment is reliable and easy to update?** During the latter phases of user testing and final revisions, we will periodically monitor our live deployment through AWS dashboards.
