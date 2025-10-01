@@ -1,32 +1,32 @@
 # Logistics  
 
 **Q1:** At what time in the week would your group be available to meet online?  
-Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8pm
+*Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8pm
 
 ---
 
 # Timeline: Weekly Meeting Goals  
 
 **Q2:** What is your goals that your group want to achieve in each weekly meeting?  
-9/25 - Initial meeting, decide on Project Idea, set up Jira-GitHub-Figma, decide roles for Milestone 2
+*9/25 - Initial meeting, decide on Project Idea, set up Jira-GitHub-Figma, decide roles for Milestone 2
 
-10/2 - Completing Milestone 2, outlining Python and initial data structures for project, beginning prototype mockups & user flow (UI/UX)
+*10/2 - Completing Milestone 2, outlining Python and initial data structures for project, beginning prototype mockups & user flow (UI/UX)
 
-10/9 - Finishing project mockup, starting work on frontend/backend, data collection for project site
+*10/9 - Finishing project mockup, starting work on frontend/backend, data collection for project site
 
-10/16 - Adding data to project site, building out Flask webpages, hooking up backend/API access, outlining initial data structures to use
+*10/16 - Adding data to project site, building out Flask webpages, hooking up backend/API access, outlining initial data structures to use
 
-10/23 - Revising frontend/backend after peer review, consider "sprint" workflow
+*10/23 - Revising frontend/backend after peer review, consider "sprint" workflow
 
-10/30 - Backend API set, data collection finished, reestablishing UX guidelines
+*10/30 - Backend API set, data collection finished, reestablishing UX guidelines
 
-11/6 - Improving code efficiency, space/time complexity, cleaning up code to finish frontend/backend work
+*11/6 - Improving code efficiency, space/time complexity, cleaning up code to finish frontend/backend work
 
-11/13 - Running early user testing, polishing frontend and backend
+*11/13 - Running early user testing, polishing frontend and backend
 
-11/20 - Creating presentation guide, final testing and additonal review
+*11/20 - Creating presentation guide, final testing and additonal review
 
-12/4 - Deploying and submitting Full-Stack project, presenting in class
+*12/4 - Deploying and submitting Full-Stack project, presenting in class
 
 # Communication  
 
@@ -50,7 +50,7 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 **Q4a:** How will your group handle situations when there is conflict in your group?  
 *Our group will handle situations when there is a conflict in our group by communicating with each other on Discord and on our online meeting. We will make sure the everyone is on the same page and figure out how to resolve the conflict. 
 **Q4b:** How will your group handle situations when a member is not contributing enough?  
-* Our group will handle situations when a member is not contributing enough by contacting that member and ensuring that they need to complete their part of the work that was assigned to them. We will each have assigned parts of the group project and will be responsible to complete them by a certain deadline that will be set by us. This will be done by using Jira to ensure that every member understands what needs to be done by when. If the member isn't contributing because they are struggling with their part, we will make sure to help them in order to motivate that member to contribute to their part.
+*Our group will handle situations when a member is not contributing enough by contacting that member and ensuring that they need to complete their part of the work that was assigned to them. We will each have assigned parts of the group project and will be responsible to complete them by a certain deadline that will be set by us. This will be done by using Jira to ensure that every member understands what needs to be done by when. If the member isn't contributing because they are struggling with their part, we will make sure to help them in order to motivate that member to contribute to their part.
 
 ---
 
@@ -71,9 +71,11 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 ---
 
 # Track 1: Tackling Generative AI Consequences
-**Problem 1:** A common problem during this decade has been how AI apps are keeping people's data secure. Large AI models often take in users' data and manage connections with third-party apps to discover more about the user than was previiously known to them. This is especially a concern of older populations 
+**Problem 1:** 
+*A common problem during this decade has been how AI apps are keeping people's data secure. Large AI models often take in users' data and manage connections with third-party apps to discover more about the user than was previiously known to them. This is especially a concern of older populations 
 
-**Solution 1:** Our solution is to build a lightweight LLM app that filters incoming requests and monitors connections to AI models in the web browser. The LLM is localized to respect the individual user, and trained to summarize user-AI relationships at the base level. 
+**Solution 1:** 
+*Our solution is to build a lightweight LLM app that filters incoming requests and monitors connections to AI models in the web browser. The LLM is localized to respect the individual user, and trained to summarize user-AI relationships at the base level. 
 
 ---
 
@@ -128,17 +130,20 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 
 
 **Q4: Does your API key has limitations such as rate limits or downtime? How are you going to deal with that?**
+*Firebase and DynamoDB have some limits such as quotas for login attempts for Firebase and read/write limits for DynamoDB. We will carefully monitor these limits to see if they are approached or not, making changes where necessary. In the case of downtime, we will add error handling, preventing the whole app from crashing if there are temporary issues.
 
 ## Authentication and Security
 
 **Q5: What authentication method will you use (e.g., username/password, OAuth, JWT)?**
 *As stated from above, we are going to us Firebase Authentication for secure username/password-based logins.*
 
-**Q6: How will you store and protect sensitive user data (e.g., passwords, tokens)?** The APIs we use should be listed in .env files and ignored outright from public commits via .gitignore. Additionally, any tokens we use should be processed through GitHub, accessible through all members, and managed locally, if need be.
+**Q6: How will you store and protect sensitive user data (e.g., passwords, tokens)?** 
+*The APIs we use should be listed in .env files and ignored outright from public commits via .gitignore. Additionally, any tokens we use should be processed through GitHub, accessible through all members, and managed locally, if need be.
 
 ## Deployment
 
 **Q7: Where will you deploy your project (e.g., Heroku, AWS, Render)? How will you manage environment variables and secrets during deployment?**
 *Currently, we are strongly considering using AWS to deploy our project. We will manage environmntal variables by using it on an EC2 instance's environment or ultilizing AWS Secrets Manager.*
 
-**Q8: How will you ensure your deployment is reliable and easy to update?** During the latter phases of user testing and final revisions, we will periodically monitor our live deployment through AWS dashboards.
+**Q8: How will you ensure your deployment is reliable and easy to update?** 
+*During the latter phases of user testing and final revisions, we will periodically monitor our live deployment through AWS dashboards.
