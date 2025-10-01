@@ -1,10 +1,6 @@
 # Logistics  
 
 **Q1:** At what time in the week would your group be available to meet online?  
-**Example:**  
-*We are available to meet online on weekends from 12pm-8pm (12-2pm Saturday + Sunday), as well as from 4pm-6pm on Fridays.*  
-*Our weekly meeting will be Thursday 11am-12pm.*  
-
 Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8pm
 
 ---
@@ -12,15 +8,6 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 # Timeline: Weekly Meeting Goals  
 
 **Q2:** What is your goals that your group want to achieve in each weekly meeting?  
-**Example:**  
-*Prior to 3/13: Weekly Meeting we will plan out some preliminary info/idea for the project itself ahead of the scheduled meeting like which data source/API and data structures we will use in our backend. We will browse [the given list of public APIs for inspiration](https://github.com/public-apis/public-apis).*  
-
-*During week of 3/25: Work on the project rough draft itself to make a functioning project with data input, data structure usage, and processing into output on the frontend.*  
-
-*Prior to 4/17: Meet together weekly to target project weakpoints/bugs and possibly visit office hours to get guidance if the progress feels weak.*  
-
----
-
 9/25 - Intial meeting, decide on Project Idea, set up Jira-GitHub-Figma, decide roles for Milestone 2
 
 10/2 - Completing Milestone 2, outlining Python and initial data structures for project, beginning prototype mockups & user flow (UI/UX)
@@ -65,19 +52,12 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 **Q4b:** How will your group handle situations when a member is not contributing enough?  
 * Our group will handle situations when a member is not contributing enough by contacting that member and ensuring that they need to complete their part of the work that was assigned to them. We will each have assigned parts of the group project and will be responsible to complete them by a certain deadline that will be set by us. This will be done by using Jira to ensure that every member understands what needs to be done by when. If the member isn't contributing because they are struggling with their part, we will make sure to help them in order to motivate that member to contribute to their part.
 
-**Example:**  
-*If there is conflict, we will meet up and discuss and resolve the conflict. Conflict can also be just misunderstanding.*
-*If a student believes another student is not pulling their weight, or if there is any difficulty working together, they must bring it up so that we can resolve it ASAP. Resolving team issues early prevents it from going out of control.*
-*We will be using Jira to split responsibilities and agree on each person's duty beforehand, allowing clarity and avoiding a team member underworking or overworking.* 
 ---
 
 # Roles  
 
 **Q5:** How will your group divide your role in the Group Project?  
 *Tam - , Trenton - , Rohan - , Ayush - 
-
-**Example:**  
-*Mauricio - Backend, Justin - Project Lead, Claudia - Frontend.*  
 
 ---
 
