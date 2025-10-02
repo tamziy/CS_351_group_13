@@ -143,6 +143,5 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 
 **Q8: How will you ensure your deployment is reliable and easy to update?** *During the latter phases of user testing and final revisions, we will periodically monitor our live deployment through AWS dashboards.*
 
-*test*
 
 
