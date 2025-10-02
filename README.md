@@ -141,4 +141,8 @@ Unless otherwise specified, we'll can meet online, weekly, on Thursdays from 7-8
 **Q7: Where will you deploy your project (e.g., Heroku, AWS, Render)? How will you manage environment variables and secrets during deployment?**
 *Currently, we are strongly considering using AWS to deploy our project. We will manage environmntal variables by using it on an EC2 instance's environment or ultilizing AWS Secrets Manager.*
 
-**Q8: How will you ensure your deployment is reliable and easy to update?** During the latter phases of user testing and final revisions, we will periodically monitor our live deployment through AWS dashboards.
+**Q8: How will you ensure your deployment is reliable and easy to update?** *During the latter phases of user testing and final revisions, we will periodically monitor our live deployment through AWS dashboards.*
+
+*test*
+
+
