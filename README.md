@@ -127,8 +127,6 @@
 **Q3: Which third-party API(s) will you integrate into your project? What data will you pull from the API(s), and how will you use it in your application?**
 *We are thinking of using Firebase Authentication as one of our third-party API. We will pull user authentication data from Firebase Authentication to securely manage sign-up, login, and session tracking.*
 
-
-
 **Q4: Does your API key has limitations such as rate limits or downtime? How are you going to deal with that?**
 *Firebase and DynamoDB have some limits such as quotas for login attempts for Firebase and read/write limits for DynamoDB. We will carefully monitor these limits to see if they are approached or not, making changes where necessary. In the case of downtime, we will add error handling, preventing the whole app from crashing if there are temporary issues.
 
