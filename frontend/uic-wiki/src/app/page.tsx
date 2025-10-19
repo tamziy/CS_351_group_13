@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from "react";
 import testImg from './assets/images/testImg.png';
+import classIcon from './assets/images/cs_4xx_icon.png';
 // import { DefaultAccordion } from "./Accordion";
 // Import accordions
 
@@ -26,7 +27,7 @@ export default function Home() {
   }
   function ClassIcon() {
     return (
-      <Image src={testImg} alt="Testing out this image" className="w-[50px] h-auto" />
+      <Image src={classIcon} alt="Testing out this image" className="w-[50px] h-auto" />
     );
   }
 
@@ -40,8 +41,8 @@ export default function Home() {
       <hr className="text-black"></hr>
       <br></br>
       <br></br>
-      <div className="grid grid-cols-[20%_50%_20%] gap-6 justify-center h-screen">
-        <div className="bg-[#c4c4c4] p-4">
+      <div className="grid grid-cols-[50%_20%] gap-6 justify-center h-screen">
+        {/* <div className="bg-[#c4c4c4] p-4">
           <TestImg />
           <h2 className="text-4xl">UIC Class Wiki</h2>
           <h2 className="text-4xl">Computer Science</h2>
@@ -50,24 +51,26 @@ export default function Home() {
           <h2 className="text-3xl">Professors</h2>
           <h2 className="text-3xl">Class Catalog</h2>
           <h2 className="text-3xl">Class Flowchart</h2>
-        </div>
-        <div className="p-4 rounded-2xl">
-          <div className="flex flex-row">
-          <TestImg />
-          <h2 className="text-5xl">CS 4XX - [Insert Title of Class]</h2>
+        </div> */}
+        <div className="p-4 rounded-2xl space-y-4">
+          <h1 className="text-6xl">CS 4XX</h1>
+          <br></br>
+          <div className="flex flex-row gap-4">
+          <ClassIcon />
+          <h2 className="text-5xl">[Insert Title of Class]</h2>
           </div>
           <div className="bg-[#faf9f9] p-4">
-            <p>Summary: </p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p className="text-2xl">Summary: </p>
+            <p className="text-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
           </div>
           <div className="bg-[#faf9f9] p-4">
-            <h2 className="text-5xl">Comments</h2>
+            <h2 className="text-4xl">Comments</h2>
           </div>
           <div className="bg-[#faf9f9] p-4">
-            <h2 className="text-5xl">Professors</h2>
+            <h2 className="text-4xl">Professors</h2>
           </div>
           <div className="bg-[#faf9f9] p-4">
-            <h2 className="text-5xl">Grade Distribution</h2>
+            <h2 className="text-4xl">Grade Distribution</h2>
           </div>
         </div>
         <div className="bg-[#c4c4c4] rounded-2xl p-4 text-center">
