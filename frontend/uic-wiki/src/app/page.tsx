@@ -1,7 +1,10 @@
 "use client";
+import Image from 'next/image';
 import { useEffect, useState } from "react";
+import testImg from './assets/images/testImg.png';
 // import { DefaultAccordion } from "./Accordion";
 // Import accordions
+
 
 export default function Home() {
   const [message, setMessage] = useState("Loading...");
@@ -16,36 +19,76 @@ export default function Home() {
       });
   }, []);
 
+  function TestImg() {
+    return (
+      <Image src={testImg} alt="Testing out this image" className="w-[50px] h-auto" />
+    );
+  }
+  function ClassIcon() {
+    return (
+      <Image src={testImg} alt="Testing out this image" className="w-[50px] h-auto" />
+    );
+  }
+
   return (
-    <main className="bg-sky-50 flex items-center justify-center min-h-screen">
-      
+
+    <main className="bg-[#ffffff] items-center min-h-screen text-black">
+
       {/* <h1 className="text-2xl font-bold">{message}</h1> */}
-        {/* <DefaultAccordion></DefaultAccordion> */}
-      <div className="bg-red-300 w-[20%] h-[400px] rounded-xl overflow-hidden">
-        <h2>I mean, yeah!</h2>
-        <h2 className="text-5xl text-black">UIC Class Wiki</h2>
-        <h2 className="text-5xl text-black">Computer Science</h2>
-        <h2 className="text-5xl text-black">Home</h2>
-        <h2 className="text-5xl text-black">Professors</h2>
-        <h2 className="text-5xl text-black">Class Catalog</h2>
-        <h2 className="text-5xl text-black">Class Flowchart</h2>
-      </div>
-      <div className="bg-green-200 w-[50%]">
-        <h2 className="text-5xl text-black">Class Name</h2>
-        <h2 className="text-5xl text-black">Comments</h2>
-        <h2 className="text-5xl text-black">Professor</h2>
-        <h2 className="text-5xl text-black">Grade Distribution</h2>
-      </div>
-      <div className="bg-orange-200 w-[30%]">
-        <select>
-          <option value="Option 1">Red Pill</option>
-          <option value="Option 2">Blue Pill</option>
-        </select>
-        <h2 className="text-5xl text-black">Credit Hours</h2>
-        <h2 className="text-5xl text-black">Career Track</h2>
-        <h2 className="text-5xl text-black">Prerequisites</h2>
-        <h2 className="text-5xl text-black">Resources</h2>
-        <h2 className="text-5xl text-black">Rating</h2>
+      {/* <DefaultAccordion></DefaultAccordion> */}
+      <div className="bg-[#c4c4c4] h-[100px]"></div>
+      <hr className="text-black"></hr>
+      <br></br>
+      <br></br>
+      <div className="grid grid-cols-[20%_50%_20%] gap-6 justify-center h-screen">
+        <div className="bg-[#c4c4c4] p-4">
+          <TestImg />
+          <h2 className="text-4xl">UIC Class Wiki</h2>
+          <h2 className="text-4xl">Computer Science</h2>
+          <hr></hr>
+          <h2 className="text-3xl">Home</h2>
+          <h2 className="text-3xl">Professors</h2>
+          <h2 className="text-3xl">Class Catalog</h2>
+          <h2 className="text-3xl">Class Flowchart</h2>
+        </div>
+        <div className="p-4 rounded-2xl">
+          <div className="flex flex-row">
+          <TestImg />
+          <h2 className="text-5xl">CS 4XX - [Insert Title of Class]</h2>
+          </div>
+          <div className="bg-[#faf9f9] p-4">
+            <p>Summary: </p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+          <div className="bg-[#faf9f9] p-4">
+            <h2 className="text-5xl">Comments</h2>
+          </div>
+          <div className="bg-[#faf9f9] p-4">
+            <h2 className="text-5xl">Professors</h2>
+          </div>
+          <div className="bg-[#faf9f9] p-4">
+            <h2 className="text-5xl">Grade Distribution</h2>
+          </div>
+        </div>
+        <div className="bg-[#c4c4c4] rounded-2xl p-4 text-center">
+          {/* <select>
+            <option value="Option 1">Red Pill</option>
+            <option value="Option 2">Blue Pill</option>
+          </select> */}
+          <h2 className="text-4xl p-4">Credit Hours</h2>
+          <p className="text-lg p-4">3 Undergrad, 4 Grad</p>
+          <hr></hr>
+          <h2 className="text-4xl p-4">Career Track</h2>
+          <p className="text-lg p-4">Web Development, Software Engineering</p>
+          <hr></hr>
+          <h2 className="text-4xl p-4">Prerequisites</h2>
+          <p className="text-lg p-4">CS 342</p>
+          <hr></hr>
+          <h2 className="text-4xl p-4">Resources</h2>
+          <p className="text-lg text-black p-4">Past Syllabus, HTML5 Programming</p>
+          <hr></hr>
+          <h2 className="text-4xl text-black p-4">Rating</h2>
+        </div>
       </div>
 
     </main>
