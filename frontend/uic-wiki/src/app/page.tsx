@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Flowchart from "./theflowchart";
 
 export default function Home() {
   const [message, setMessage] = useState("Loading...");
@@ -17,6 +18,9 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen">
       <h1 className="text-2xl font-bold">{message}</h1>
+      <div style={{ width: '100%', height: '500px' }}>
+        <Flowchart />
+      </div>
     </main>
   );
 }
