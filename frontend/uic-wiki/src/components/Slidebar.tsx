@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <aside className="flex flex-col w-64 h-screen bg-white border-r border-gray-200 p-6 text-black">
+    <aside className="flex flex-col w-64 bg-white border-r border-gray-200 p-6 text-black">
       {/* Logo Section */}
       <div className="flex flex-col items-center mb-8">
         <Image

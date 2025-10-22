@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Slidebar";
 import TopNavBar from"@/components/TopNavBar";
+import ClassPage from  "./classPage/classPage";
+import { classData } from "./classPage/dummy_classData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +32,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen`}
       >
         <Sidebar />
-
         <div className="flex flex-col flex-1">
           <TopNavBar />
+          {classData.map((item) => (
+            <ClassPage key={item.id} item={item}/>
+          ))}
 
-          <main className="flex-1 p-6 bg-gray-50">{children}</main>
+          {/* <main className="flex-1 p-6 bg-gray-50">{children}</main> */}
         </div>
       </body>
     </html>
