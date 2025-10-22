@@ -1,7 +1,6 @@
 "use client";
 import Image from 'next/image';
 import { useEffect, useState } from "react";
-import testImg from './assets/images/testImg.png';
 import React from 'react';
 
 import classIcon1 from '../assets/images/cs111.png';
@@ -18,13 +17,13 @@ import classIcon9 from '../assets/images/cs341.png';
 import classIcon10 from '../assets/images/cs342.png';
 import classIcon11 from '../assets/images/cs361.png';
 import classIcon12 from '../assets/images/cs362.png';
-import classIcon13 from '../assets/images/cs377.png';
+import classIcon13 from '../assets/images/csXXX.png';
 
 import classIcon14 from '../assets/images/cs401.png';
 import classIcon15 from '../assets/images/cs499.png';
 
-import classIcon16 from '../assets/images/engr100.png';
-import classIcon17 from '../assets/images/math180.png';
+// import classIcon16 from '../assets/images/engr100.png';
+// import classIcon17 from '../assets/images/math180.png';
 import classIconNone from '../assets/images/csXXX.png';
 
 
@@ -84,12 +83,36 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
       case 277:
         toUse = classIcon7;
         break;
-      case 100:
-        toUse = classIcon16;
+      case 301:
+        toUse = classIcon8;
         break;
-      case 180:
-        toUse = classIcon17;
+      case 341:
+        toUse = classIcon9;
         break;
+      case 342:
+        toUse = classIcon10;
+        break;
+      case 361:
+        toUse = classIcon11;
+        break;
+      case 362:
+        toUse = classIcon12;
+        break;
+      case 377:
+        toUse = classIcon13;
+        break;
+      case 401:
+        toUse = classIcon14;
+        break;
+      case 499:
+        toUse = classIcon15;
+        break;
+      // case 499:
+      //   toUse = classIcon16;
+      //   break;
+      // case 499:
+      //   toUse = classIcon17;
+      //   break;
       default:
         toUse = classIconNone;
     }
