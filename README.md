@@ -36,7 +36,7 @@
 **Q3b:** What are the usernames of each group member on that platform?  
 *Name - Username*  
 *Tam Le - tamziy*  
-*Trenton - Trenton*  
+*Trenton Coleman - tentagonal*  
 *Ayush Patel - kingyushi*  
 *Rohan Jawale - Rohan*  
 
