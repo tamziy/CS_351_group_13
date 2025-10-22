@@ -3,9 +3,30 @@ import Image from 'next/image';
 import { useEffect, useState } from "react";
 import testImg from './assets/images/testImg.png';
 import React from 'react';
+
 import classIcon1 from '../assets/images/cs111.png';
 import classIcon2 from '../assets/images/cs141.png';
 import classIcon3 from '../assets/images/cs151.png';
+
+import classIcon4 from '../assets/images/cs211.png';
+import classIcon5 from '../assets/images/cs251.png';
+import classIcon6 from '../assets/images/cs261.png';
+import classIcon7 from '../assets/images/cs277.png';
+
+import classIcon8 from '../assets/images/cs301.png';
+import classIcon9 from '../assets/images/cs341.png';
+import classIcon10 from '../assets/images/cs342.png';
+import classIcon11 from '../assets/images/cs361.png';
+import classIcon12 from '../assets/images/cs362.png';
+import classIcon13 from '../assets/images/cs377.png';
+
+import classIcon14 from '../assets/images/cs401.png';
+import classIcon15 from '../assets/images/cs499.png';
+
+import classIcon16 from '../assets/images/engr100.png';
+import classIcon17 from '../assets/images/math180.png';
+import classIconNone from '../assets/images/csXXX.png';
+
 
 interface ItemProps {
     id: number;
@@ -39,9 +60,46 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
   }, []);
 
   function ClassIcon() {
-    let toUse = (item.courseNo == 111) ? classIcon1 : (item.courseNo == 141) ? classIcon2 : classIcon3;
+    let toUse;
+    let dum = item.courseNo;
+    switch(dum) {
+      case 111:
+        toUse = classIcon1;
+        break;
+      case 141:
+        toUse = classIcon2;
+        break;
+      case 151:
+        toUse = classIcon3;
+        break;
+      case 211:
+        toUse = classIcon4;
+        break;
+      case 251:
+        toUse = classIcon5;
+        break;
+      case 261:
+        toUse = classIcon6;
+        break;
+      case 277:
+        toUse = classIcon7;
+        break;
+      case 100:
+        toUse = classIcon16;
+        break;
+      case 180:
+        toUse = classIcon17;
+        break;
+      default:
+        toUse = classIconNone;
+    }
+    // ? classIcon1 : 
+    // (item.courseNo == 141) ? 
+    // classIcon2 : classIconNone;
+
+
     return (
-      <Image src={toUse} alt="Testing out this image" className="w-[50px] h-auto" />
+      <Image src={toUse} alt="Class Image" className="w-[50px] h-[50px]" />
     );
   }
 
@@ -70,9 +128,9 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
             <h2 className="text-2xl">Professors</h2>
             <p className="text-lg p-4">{item.professors}</p>
           </div>
-          <div className="bg-[#faf9f9] p-4">
+          {/* <div className="bg-[#faf9f9] p-4">
             <h2 className="text-2xl">Grade Distribution</h2>
-          </div>
+          </div> */}
         </div>
         <div className="bg-[#c4c4c4] rounded-2xl p-4 text-center h-screen">
           <h2 className="text-2xl p-4">Credit Hours</h2>
