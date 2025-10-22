@@ -3,8 +3,23 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Slidebar";
 import TopNavBar from"@/components/TopNavBar";
-import ClassPage from  "./classPage/classPage";
+import ClassPage from  "./classPage/classpage_all";
 import { classData } from "./classPage/dummy_classData";
+import CS111 from "./classes/cs111"
+import CS141 from "./classes/cs141"
+import CS151 from "./classes/cs151"
+import CS211 from "./classes/cs211"
+import CS251 from "./classes/cs251"
+import CS261 from "./classes/cs261"
+import CS277 from "./classes/cs277"
+import CS301 from "./classes/cs301"
+import CS341 from "./classes/cs341"
+import CS342 from "./classes/cs342"
+import CS361 from "./classes/cs361"
+import CS362 from "./classes/cs362"
+import CS377 from "./classes/cs377"
+import CS401 from "./classes/cs401"
+import CS499 from "./classes/cs499"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,9 +49,26 @@ export default function RootLayout({
         <Sidebar />
         <div className="flex flex-col flex-1">
           <TopNavBar />
-          {classData.map((item) => (
+          {/* {classData.map((item) => (
             <ClassPage key={item.id} item={item}/>
-          ))}
+          ))} */}
+
+          <CS111 />
+          {/* Classes are all referenced as <CSXXX /> components
+          <CS141 />
+          <CS151 />
+          <CS211 />
+          <CS251 />
+          <CS261 />
+          <CS277 />
+          <CS301 />
+          <CS341 />
+          <CS342 />
+          <CS361 />
+          <CS362 />
+          <CS377 />
+          <CS401 />
+          <CS499 /> */}
 
           {/* <main className="flex-1 p-6 bg-gray-50">{children}</main> */}
         </div>

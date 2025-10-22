@@ -6,46 +6,43 @@ import React from 'react';
 import classIcon1 from '../assets/images/cs111.png';
 import classIcon2 from '../assets/images/cs141.png';
 import classIcon3 from '../assets/images/cs151.png';
-
 import classIcon4 from '../assets/images/cs211.png';
 import classIcon5 from '../assets/images/cs251.png';
 import classIcon6 from '../assets/images/cs261.png';
 import classIcon7 from '../assets/images/cs277.png';
-
 import classIcon8 from '../assets/images/cs301.png';
 import classIcon9 from '../assets/images/cs341.png';
 import classIcon10 from '../assets/images/cs342.png';
 import classIcon11 from '../assets/images/cs361.png';
 import classIcon12 from '../assets/images/cs362.png';
 import classIcon13 from '../assets/images/csXXX.png';
-
 import classIcon14 from '../assets/images/cs401.png';
 import classIcon15 from '../assets/images/cs499.png';
-
-// import classIcon16 from '../assets/images/engr100.png';
-// import classIcon17 from '../assets/images/math180.png';
 import classIconNone from '../assets/images/csXXX.png';
 
+import { classData } from "../classPage/dummy_classData";
 
-interface ItemProps {
-    id: number;
-    courseNo: number;
-    classTitle: string;
-    classSummary: string;
-    reviews: string;
-    professors: string[];
-    credit_hours: number;
-    career_tracks: string[];
-    prereqs: string[];
-    resources: string[];
-    rating: string;
-}
+const item = classData[1];
 
-interface MyComponentProps {
-  item: ItemProps;
-}
+// interface ItemProps {
+//     id: number;
+//     courseNo: number;
+//     classTitle: string;
+//     classSummary: string;
+//     reviews: string;
+//     professors: string[];
+//     credit_hours: number;
+//     career_tracks: string[];
+//     prereqs: string[];
+//     resources: string[];
+//     rating: string;
+// }
 
-const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
+// interface MyComponentProps {
+//   item: ItemProps;
+// }
+
+export default function CS141() {
   const [message, setMessage] = useState("Loading...");
 
   useEffect(() => {
@@ -116,10 +113,6 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
       default:
         toUse = classIconNone;
     }
-    // ? classIcon1 : 
-    // (item.courseNo == 141) ? 
-    // classIcon2 : classIconNone;
-
 
     return (
       <Image src={toUse} alt="Class Image" className="w-[50px] h-[50px]" />
@@ -174,5 +167,3 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
     </main>
   );
 }
-
-export default ClassPage;
