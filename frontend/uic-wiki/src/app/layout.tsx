@@ -49,28 +49,7 @@ export default function RootLayout({
         <Sidebar />
         <div className="flex flex-col flex-1">
           <TopNavBar />
-          {/* {classData.map((item) => (
-            <ClassPage key={item.id} item={item}/>
-          ))} */}
-
-          <CS111 />
-          {/* Classes are all referenced as <CSXXX /> components
-          <CS141 />
-          <CS151 />
-          <CS211 />
-          <CS251 />
-          <CS261 />
-          <CS277 />
-          <CS301 />
-          <CS341 />
-          <CS342 />
-          <CS361 />
-          <CS362 />
-          <CS377 />
-          <CS401 />
-          <CS499 /> */}
-
-          {/* <main className="flex-1 p-6 bg-gray-50">{children}</main> */}
+          <main className="flex-1 p-6 bg-gray-50">{children}</main>
         </div>
       </body>
     </html>

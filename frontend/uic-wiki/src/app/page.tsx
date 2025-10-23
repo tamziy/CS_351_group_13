@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+
+
 export default function HomePage() {
   return (
     <main className="p-6 text-black">
@@ -37,14 +40,18 @@ function ClassLevel({ title, codes, color }: { title: string; codes: string[]; c
     <div>
       <h3 className="font-medium mb-2">{title}</h3>
       <div className="flex flex-wrap gap-3">
-        {codes.map((code) => (
-          <div
-            key={code}
-            className={`px-4 py-2 rounded-xl text-white font-semibold bg-gradient-to-r ${color}`}
-          >
-            {code}
-          </div>
-        ))}
+        {codes.map((code) => {
+          const classNumber = code.split(" ")[1];
+          return (
+            <Link
+              key={code}
+              href={`/classes/${classNumber}`}
+              className={`px-4 py-2 rounded-xl text-white font-semibold bg-gradient-to-r ${color}`}
+            >
+              {code}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
