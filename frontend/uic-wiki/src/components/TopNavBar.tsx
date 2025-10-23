@@ -29,7 +29,7 @@ export default function Navbar() {
       {/* Centered Search Bar */}
       <div className="absolute left-1/2 transform -translate-x-1/2 w-1/3">
         <div className="flex items-center bg-gray-100 rounded-md px-3 py-2">
-          <Search className="w-4 h-4 text-gray-500 mr-2" />
+          <Search className="w-4 h-4 text-black-800 mr-2" />
           <input
             type="text"
             placeholder="Search"
@@ -45,7 +45,7 @@ export default function Navbar() {
                   <li key={item}>
                     <Link
                       href={`/classes/${classNumber}`}
-                      className="block p-2 hover:bg-gray-100 cursor-pointer"
+                      className="block p-2 hover:bg-gray-100 cursor-pointer text-black"
                       onClick={()=> {
                         setValue("")
                         setSuggestions([])
