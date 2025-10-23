@@ -118,8 +118,8 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
 
   return (
         // const { id, description, timestamp, start_time, end_time, category, address, author, max_members, members } = event;
-    <main className="bg-[#ffffff] items-center min-h-screen text-black">
-      <hr className="text-black"></hr>
+    <main className="bg-gray-50 items-center min-h-screen text-black">
+      {/* <hr className="text-black"></hr> */}
       <br></br>
       <div className="grid grid-cols-[50%_20%] gap-6 justify-center">
         <div className="p-4 rounded-2xl space-y-4">
