@@ -32,7 +32,7 @@ interface ItemProps {
     career_tracks: string[];
     prereqs: string[];
     resources: string[];
-    rating: string;
+    difficulty: number;
 }
 
 interface MyComponentProps {
@@ -130,16 +130,16 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
           <h2 className="text-2xl">{item.classTitle}</h2>
           </div>
           <div className="bg-[#faf9f9] p-4">
-            <p className="text-xl">Summary: </p>
-            <p className="text-lg">{item.classSummary}</p>
+            <h2 className="text-xl"><b>Summary:</b></h2>
+            <p className="text-lg p-4">{item.classSummary}</p>
           </div>
           <div className="bg-[#faf9f9] p-4">
-            <h2 className="text-2xl">Reviews</h2>
-            <p className="text-lg p-4">{item.reviews}</p>
+            <h2 className="text-2xl"><em>CS students say:</em></h2>
+            <p className="text-lg p-4">&quot;{item.reviews}&quot;</p>
           </div>
           <div className="bg-[#faf9f9] p-4">
-            <h2 className="text-2xl">Professors</h2>
-            <p className="text-lg p-4">{item.professors}</p>
+            <h2 className="text-2xl">Current Professors</h2>
+            <p className="text-lg p-4">{item.professors.join(" - ")}</p>
           </div>
           {/* <div className="bg-[#faf9f9] p-4">
             <h2 className="text-2xl">Grade Distribution</h2>
@@ -149,11 +149,11 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
           <h2 className="text-2xl p-4">Credit Hours</h2>
           <p className="text-lg p-4">{item.credit_hours}</p>
           <hr></hr>
-          <h2 className="text-2xl p-4">Career Track</h2>
-          <p className="text-lg p-4">{item.career_tracks}</p>
-          <hr></hr>
           <h2 className="text-2xl p-4">Prerequisites</h2>
-          <p className="text-lg p-4">{item.prereqs}</p>
+          <p className="text-lg p-4">{item.prereqs.join(" - ")}</p>
+          <hr></hr>
+          <h2 className="text-2xl p-4">Career Tracks</h2>
+          <p className="text-lg p-4">{item.career_tracks}</p>
           <hr></hr>
           <h2 className="text-2xl p-4">Resources</h2>
           <p className="text-lg text-black p-4">{item.resources}</p>
