@@ -19,6 +19,7 @@ import classIcon13 from '../assets/images/csXXX.png';
 import classIcon14 from '../assets/images/cs401.png';
 import classIcon15 from '../assets/images/cs499.png';
 import classIconNone from '../assets/images/csXXX.png';
+import { AccordionDemo } from '../assets/images/accordion';
 
 
 interface ItemProps {
@@ -144,6 +145,7 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
           {/* <div className="bg-[#faf9f9] p-4">
             <h2 className="text-2xl">Grade Distribution</h2>
           </div> */}
+          <AccordionDemo />
         </div>
         <div className="bg-[#c4c4c4] rounded-2xl p-4 text-center h-screen">
           <h2 className="text-2xl p-4">Credit Hours</h2>

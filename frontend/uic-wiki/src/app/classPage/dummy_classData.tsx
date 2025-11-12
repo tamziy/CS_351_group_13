@@ -190,7 +190,7 @@ export const classData = [
     reviews: "Arduino coding, more of an Electrical Engineering class tbh. Teaches about logic gates and low level hardware stuff. If you have Diaz, do good on the midterm and you only need to care about your project after that, can skip the final.",
     professors: ["Evan McCarty"],
     credit_hours: 4,
-    career_tracks: ["CS 261"],
+    career_tracks: ["None Specified"],
     prereqs: ["N/A"],
     resources: ["N/A"],
     difficulty: 2,
