@@ -145,10 +145,11 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
           {/* <div className="bg-[#faf9f9] p-4">
             <h2 className="text-2xl">Grade Distribution</h2>
           </div> */}
-          <AccordionDemo />
         </div>
-        <div className="bg-[#c4c4c4] rounded-2xl p-4 text-center h-screen">
-          <h2 className="text-2xl p-4">Credit Hours</h2>
+        <div>
+          <br></br>
+          <AccordionDemo />
+          {/* <h2 className="text-2xl p-4">Credit Hours</h2>
           <p className="text-lg p-4">{item.credit_hours}</p>
           <hr></hr>
           <h2 className="text-2xl p-4">Prerequisites</h2>
@@ -159,7 +160,7 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
           <hr></hr>
           <h2 className="text-2xl p-4">Resources</h2>
           <p className="text-lg text-black p-4">{item.resources}</p>
-          <hr></hr>
+          <hr></hr> */}
         </div>
       </div>
 
