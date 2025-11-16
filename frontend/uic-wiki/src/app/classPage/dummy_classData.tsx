@@ -191,7 +191,7 @@ export const classData = [
     professors: ["Evan McCarty"],
     credit_hours: 4,
     career_tracks: ["None Specified"],
-    prereqs: ["N/A"],
+    prereqs: ["CS 261"],
     resources: ["N/A"],
     difficulty: 2,
   },

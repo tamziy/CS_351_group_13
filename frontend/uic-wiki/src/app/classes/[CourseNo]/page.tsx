@@ -14,7 +14,7 @@ export default function DynamicClassPage() {
     return (
       <main className="p-6 text-black">
         <h1 className="text-2xl font-semibold">Class not found</h1>
-        <p>No course data exists for CS {courseNo}</p>
+        <p>No course data exists for this class</p>
       </main>
     );
   }
