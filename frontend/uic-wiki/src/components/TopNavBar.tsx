@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Search, MessageCircle, Bell, Settings } from "lucide-react";
 import Link from "next/link";
-
+import AuthButton from "./AuthButton";
 
 export default function Navbar() {
 
@@ -62,11 +62,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Icons on the right */}
-      <div className="flex items-center gap-6 text-gray-700 ml-auto">
-        <MessageCircle className="w-5 h-5 cursor-pointer hover:text-black" />
-        <Bell className="w-5 h-5 cursor-pointer hover:text-black" />
-        <Settings className="w-5 h-5 cursor-pointer hover:text-black" />
+      {/* sign in sign out */}
+      <div className="flex items-center gap-6 ml-auto">
+        <AuthButton />
       </div>
     </header>
   );
