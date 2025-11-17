@@ -21,7 +21,7 @@ import classIcon14 from '../assets/images/cs401.png';
 import classIcon15 from '../assets/images/cs499.png';
 import classIconNone from '../assets/images/csXXX.png';
 // import { AccordionDemo } from '../assets/images/accordion';
-  import {
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -31,17 +31,17 @@ import classIconNone from '../assets/images/csXXX.png';
 
 
 interface ItemProps {
-    id: number;
-    courseNo: number;
-    classTitle: string;
-    classSummary: string;
-    reviews: string;
-    professors: string[];
-    credit_hours: number;
-    career_tracks: string[];
-    prereqs: string[];
-    resources: string[];
-    difficulty: number;
+  id: number;
+  courseNo: number;
+  classTitle: string;
+  classSummary: string;
+  reviews: string;
+  professors: string[];
+  credit_hours: number;
+  career_tracks: string[];
+  prereqs: string[];
+  resources: string[];
+  difficulty: number;
 }
 
 interface MyComponentProps {
@@ -64,7 +64,7 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
   function ClassIcon() {
     let toUse;
     let dum = item.courseNo;
-    switch(dum) {
+    switch (dum) {
       case 111:
         toUse = classIcon1;
         break;
@@ -120,45 +120,45 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
   }
 
 
- function AccordionDemo() {
-  return (
-    <Accordion
-      type="single"
-      collapsible
-      className="w-full"
-      defaultValue="item-1"
-    >
-      <AccordionItem value="item-1">
-        <AccordionTrigger className="text-xl">Credit Hours</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p className="text-lg">
-            {item.credit_hours}
-          </p>
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger className="text-xl">Class Difficulty</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p className="text-lg">
-            {item.difficulty} out of 5
-          </p>
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger className="text-xl">Prerequisites</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
+  function AccordionDemo() {
+    return (
+      <Accordion
+        type="single"
+        collapsible
+        className="w-full"
+        defaultValue="item-1"
+      >
+        <AccordionItem value="item-1">
+          <AccordionTrigger className="text-xl">Credit Hours</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+            <p className="text-lg">
+              {item.credit_hours}
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-2">
+          <AccordionTrigger className="text-xl">Class Difficulty</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+            <p className="text-lg">
+              {item.difficulty} out of 5
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-3">
+          <AccordionTrigger className="text-xl">Prerequisites</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
             <ClassLevel title="" codes={item.prereqs} color="from-red-400 to-red-500" />
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-4">
-        <AccordionTrigger className="text-xl">Current Professors</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p className="text-lg">
-            {item.professors.join(" / ")}
-          </p>
-        </AccordionContent>
-      </AccordionItem>
-      {/* <AccordionItem value="item-5">
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-4">
+          <AccordionTrigger className="text-xl">Current Professors</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+            <p className="text-lg">
+              {item.professors.join(" / ")}
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+        {/* <AccordionItem value="item-5">
         <AccordionTrigger className="text-xl">Resources</AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
@@ -166,39 +166,39 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
           </p>
         </AccordionContent>
       </AccordionItem> */}
-    </Accordion>
-  )
-}
+      </Accordion>
+    )
+  }
 
-function ClassLevel({ title, codes, color }: { title: string; codes: string[]; color: string }) {
-  return (
-    <div>
-      <h3 className="font-medium mb-2">{title}</h3>
-      <div className="flex flex-wrap gap-3">
-        {codes.map((code) => {
-          const classNumber = code.split(" ")[1];
-          return (
-            <Link
-              key={code}
-              href={`/classes/${classNumber}`}
-              className={`px-4 py-2 rounded-xl text-white font-semibold bg-gradient-to-r ${color}`}
-            >
-              {code}
-            </Link>
-          );
-        })}
+  function ClassLevel({ title, codes, color }: { title: string; codes: string[]; color: string }) {
+    return (
+      <div>
+        <h3 className="font-medium mb-2">{title}</h3>
+        <div className="flex flex-wrap gap-3">
+          {codes.map((code) => {
+            const classNumber = code.split(" ")[1];
+            return (
+              <Link
+                key={code}
+                href={`/classes/${classNumber}`}
+                className={`px-4 py-2 rounded-xl text-white font-semibold bg-gradient-to-r ${color}`}
+              >
+                {code}
+              </Link>
+            );
+          })}
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
   return (
     <main className="bg-gray-50 items-center min-h-full text-black">
       <div className="grid grid-cols-[50%_20%] gap-6 justify-center">
         <div className="p-4 rounded-2xl space-y-4">
           <div className="flex flex-row gap-4">
-          <ClassIcon />
-          <h1 className="text-3xl"><b>{item.classTitle}</b></h1>
+            <ClassIcon />
+            <h1 className="text-3xl"><b>{item.classTitle}</b></h1>
           </div>
           <br></br>
           <div className="bg-[#E0E0E0] p-4 rounded-3xl">
@@ -209,10 +209,6 @@ function ClassLevel({ title, codes, color }: { title: string; codes: string[]; c
             <h2 className="text-2xl"><em>CS students say:</em></h2>
             <p className="text-lg p-4">&quot;{item.reviews}&quot;</p>
           </div>
-          {/* <div className="bg-[#bdbdbd] p-4 rounded-3xl">
-            <h2 className="text-2xl"><u>Current Professors:</u></h2>
-            <p className="text-base p-4">{item.professors.join(" / ")}</p>
-          </div> */}
         </div>
         <div>
           <br></br>

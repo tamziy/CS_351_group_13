@@ -232,7 +232,7 @@ export const classData = [
     professors: ["John Bell"],
     credit_hours: 0,
     career_tracks: ["None Specified"],
-    prereqs: ["*Graduating Seniors Only"],
+    prereqs: ["N/A"],
     resources: ["N/A"],
     difficulty: 1,
   },
