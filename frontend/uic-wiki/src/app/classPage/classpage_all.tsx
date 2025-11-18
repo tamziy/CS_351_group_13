@@ -190,96 +190,96 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
     )
   }
 
-const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-]
+  const chartData = [
+    { month: "January", desktop: 186, mobile: 80 },
+    { month: "February", desktop: 305, mobile: 200 },
+    { month: "March", desktop: 237, mobile: 120 },
+    { month: "April", desktop: 73, mobile: 190 },
+    { month: "May", desktop: 209, mobile: 130 },
+    { month: "June", desktop: 214, mobile: 140 },
+  ]
 
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "var(--chart-2)",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "var(--chart-2)",
-  },
-  label: {
-    color: "var(--background)",
-  },
-} satisfies ChartConfig
+  const chartConfig = {
+    desktop: {
+      label: "Desktop",
+      color: "var(--chart-2)",
+    },
+    mobile: {
+      label: "Mobile",
+      color: "var(--chart-2)",
+    },
+    label: {
+      color: "var(--background)",
+    },
+  } satisfies ChartConfig
 
- function ChartBarLabelCustom() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Bar Chart - Custom Label</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig}>
-          <BarChart
-            accessibilityLayer
-            data={chartData}
-            layout="vertical"
-            margin={{
-              right: 16,
-            }}
-          >
-            <CartesianGrid horizontal={false} />
-            <YAxis
-              dataKey="month"
-              type="category"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-              tickFormatter={(value) => value.slice(0, 3)}
-              hide
-            />
-            <XAxis dataKey="desktop" type="number" hide />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent indicator="line" />}
-            />
-            <Bar
-              dataKey="desktop"
+  function ChartBarLabelCustom() {
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle>Bar Chart - Custom Label</CardTitle>
+          <CardDescription>January - June 2024</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <ChartContainer config={chartConfig}>
+            <BarChart
+              accessibilityLayer
+              data={chartData}
               layout="vertical"
-              fill="var(--color-desktop)"
-              radius={4}
+              margin={{
+                right: 16,
+              }}
             >
-              <LabelList
+              <CartesianGrid horizontal={false} />
+              <YAxis
                 dataKey="month"
-                position="insideLeft"
-                offset={8}
-                className="fill-(--color-label)"
-                fontSize={12}
+                type="category"
+                tickLine={false}
+                tickMargin={10}
+                axisLine={false}
+                tickFormatter={(value) => value.slice(0, 3)}
+                hide
               />
-              <LabelList
+              <XAxis dataKey="desktop" type="number" hide />
+              <ChartTooltip
+                cursor={false}
+                content={<ChartTooltipContent indicator="line" />}
+              />
+              <Bar
                 dataKey="desktop"
-                position="right"
-                offset={8}
-                className="fill-foreground"
-                fontSize={12}
-              />
-            </Bar>
-          </BarChart>
-        </ChartContainer>
-      </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 leading-none font-medium">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="text-muted-foreground leading-none">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter>
-    </Card>
-  )
-}
+                layout="vertical"
+                fill="var(--color-desktop)"
+                radius={4}
+              >
+                <LabelList
+                  dataKey="month"
+                  position="insideLeft"
+                  offset={8}
+                  className="fill-(--color-label)"
+                  fontSize={12}
+                />
+                <LabelList
+                  dataKey="desktop"
+                  position="right"
+                  offset={8}
+                  className="fill-foreground"
+                  fontSize={12}
+                />
+              </Bar>
+            </BarChart>
+          </ChartContainer>
+        </CardContent>
+        <CardFooter className="flex-col items-start gap-2 text-sm">
+          <div className="flex gap-2 leading-none font-medium">
+            Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          </div>
+          <div className="text-muted-foreground leading-none">
+            Showing total visitors for the last 6 months
+          </div>
+        </CardFooter>
+      </Card>
+    )
+  }
 
 
   function ClassLevel({ title, codes, color }: { title: string; codes: string[]; color: string }) {
@@ -305,39 +305,49 @@ const chartConfig = {
   }
 
   return (
-    <main className="bg-gray-50 items-center min-h-full text-black">
-      <div className="grid grid-cols-[70%_20%] gap-6 justify-center">
-        <div className="p-4 rounded-2xl space-y-4 text-wrap">
-          <div className="flex flex-row gap-4">
-            <ClassIcon />
-            <h1 className="text-3xl"><b>{item.classTitle}</b></h1>
-          </div>
-          <br></br>
-          <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
-            <h2 className="text-2xl">Summary:</h2>
-            <p className="text-lg p-4">{item.classSummary}</p>
-          </div>
-          <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
-            <h2 className="text-2xl"><em>CS students say:</em></h2>
-            <p className="text-lg p-4">&quot;{item.reviews}&quot;</p>
-          </div>
-        </div>
-        <div className="mt-24">
-          <AccordionDemo />
-        </div>
-        <div className="mt-24">
-          <ChartBarLabelCustom />  
-        </div>
-      </div>
+    // Wrapper holding everything
+    <main className="bg-gray-50 min-h-full text-black">
+      <div className="max-w-7xl mx-auto px-6 py-8">
 
+        {/* Class Name and Icon */}
+        <div className="flex gap-4 items-center mb-8">
+              <ClassIcon />
+              <h1 className="text-3xl"><b>{item.classTitle}</b></h1>
+        </div>
+
+        {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 space-y-6">
+            <div className="flex flex-row gap-4">
+            </div>
+            <br></br>
+            <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
+              <h2 className="text-2xl">Summary:</h2>
+              <p className="text-lg p-4">{item.classSummary}</p>
+            </div>
+            <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
+              <h2 className="text-2xl"><em>CS students say:</em></h2>
+              <p className="text-lg p-4">&quot;{item.reviews}&quot;</p>
+            </div>
+          </div>
+
+
+          <div className="lg:col-span-1">
+            <AccordionDemo />
+          </div>
+          <div>
+            <ChartBarLabelCustom />
+          </div> */}
+
+
+      </div>
     </main>
-  );
+
+  )
 }
 
 export default ClassPage;
 
-
-<main className="bg-gray-50 items-center min-h-full text-black">
+{/* <main className="bg-gray-50 min-h-full text-black">
       <div className="grid grid-cols-[70%_20%] gap-6 justify-center">
         <div className="p-4 rounded-2xl space-y-4 text-wrap">
           <div className="flex flex-row gap-4">
@@ -360,4 +370,4 @@ export default ClassPage;
         <div className="mt-24">
           <ChartBar />  
         </div>
-      </div>
+      </div> */}
