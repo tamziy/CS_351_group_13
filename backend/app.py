@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+
 from trie import Trie
+from cuckoo import CuckooHashTable
 
 app = Flask(__name__)
 CORS(app)  # allow requests from your Next.js frontend (localhost:3000)
@@ -8,9 +10,12 @@ CORS(app)  # allow requests from your Next.js frontend (localhost:3000)
 trie = Trie()
 trie.getFromFile("classes.txt")
 
+table = CuckooHashTable()
+table.load_csv("courses.csv")
+
 @app.route('/')
 def home():
-    return jsonify(message="UIC WIKI TEST")
+    return jsonify(message="BACKEND RUNNING")
 
 # This connects to the frontend search bar for autocomplete.
 # The frontend just needs to make a GET request to this URL with what the user types:
@@ -22,7 +27,24 @@ def home():
 def suggest():
     q = request.args.get("q", "").upper()
     suggestions = trie.starts_with(q)
+    print(suggestions)
     return jsonify({"suggestions": suggestions})
+
+@app.route('/class')
+def get_class():
+    course_num = request.args.get("num")
+
+    if not course_num:
+        return jsonify({"error": "Missing ?num= parameter"}), 400
+
+    key = f"CS {course_num}"
+    result = table.search(key)
+
+    if result is None:
+        return jsonify({"error": "Course not found"}), 404
+    print(result)
+    return jsonify(result)
+
 
 
 
