@@ -48,6 +48,13 @@ export const classData = [
     prereqs: ["N/A"],
     resources: ["N/A"],
     difficulty: 4,
+    gradeData: [
+    { browser: "chrome", visitors: 44.2, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 32.7, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 9.7, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 3.5, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 9.7, fill: "var(--color-other)" },
+],
   },
   {
     id: 2,
@@ -60,7 +67,13 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 111", "MATH 180"],
     resources: ["N/A"],
-    difficulty: 3,
+    gradeData: [
+    { browser: "chrome", visitors: 44.6, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 28.8, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 15.2, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 5.4, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 6, fill: "var(--color-other)" },
+],
   },
   {
     id: 3,
@@ -73,7 +86,13 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 111", "MATH 180"],
     resources: ["N/A"],
-    difficulty: 2,
+    gradeData: [
+    { browser: "chrome", visitors: 35.4, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 40.6, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 19.2, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 3.1, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 1.7, fill: "var(--color-other)" },
+],
   },
 
   //200-level courses - Still need to put in reviews for these
@@ -88,7 +107,13 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 141"],
     resources: ["N/A"],
-    difficulty: 3,
+    gradeData: [
+    { browser: "chrome", visitors: 27.5, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 28.7, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 28.1, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 10.5, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 5.3, fill: "var(--color-other)" },
+],
   },
   {
     id: 5,
@@ -101,7 +126,13 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 141", "CS 151"],
     resources: ["N/A"],
-    difficulty: 3,
+    gradeData: [
+    { browser: "chrome", visitors: 31.5, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 29.2, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 23, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 11.2, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 5.1, fill: "var(--color-other)" },
+],
   },
   {
     id: 6,
@@ -114,7 +145,13 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 211"],
     resources: ["N/A"],
-    difficulty: 3,
+    gradeData: [
+    { browser: "chrome", visitors: 28.8, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 39.6, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 21.6, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 6.8, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 3.2, fill: "var(--color-other)" },
+],
   },
   {
     id: 7,
@@ -127,7 +164,11 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 141"],
     resources: ["N/A"],
-    difficulty: 1,
+    gradeData: [
+    { browser: "chrome", visitors: 85.9, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 8.9, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 5.2, fill: "var(--color-firefox)" },
+],
   },
   //300-level courses
   {
@@ -141,7 +182,13 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 151", "CS 251"],
     resources: ["N/A"],
-    difficulty: 3,
+    gradeData: [
+    { browser: "chrome", visitors: 39.9, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 31, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 18.4, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 8.2, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 2.4, fill: "var(--color-other)" },
+],
   },
   {
     id: 9,
@@ -154,7 +201,13 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 211", "CS 251"],
     resources: ["N/A"],
-    difficulty: 2,
+    gradeData: [
+    { browser: "chrome", visitors: 24.7, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 26.6, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 27.8, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 17.5, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 3.4, fill: "var(--color-other)" },
+],
   },
   {
     id: 10,
@@ -167,7 +220,12 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 211", "CS 251"],
     resources: ["N/A"],
-    difficulty: 3,
+    gradeData: [
+    { browser: "chrome", visitors: 54.9, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 38.3, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 6.4, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 0.4, fill: "var(--color-edge)" },
+],
   },
   {
     id: 11,
@@ -180,7 +238,13 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 261"],
     resources: ["N/A"],
-    difficulty: 5,
+    gradeData: [
+    { browser: "chrome", visitors: 30.6, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 36.7, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 20.4, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 4.1, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 8.2, fill: "var(--color-other)" },
+],
   },
   {
     id: 12,
@@ -193,7 +257,13 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 261"],
     resources: ["N/A"],
-    difficulty: 2,
+    gradeData: [
+    { browser: "chrome", visitors: 32.1, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 42.2, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 20.3, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 3.2, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 2.1, fill: "var(--color-other)" },
+],
   },
   {
     id: 13,
@@ -206,7 +276,11 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 251"],
     resources: ["N/A"],
-    difficulty: 1,
+    gradeData: [
+    { browser: "chrome", visitors: 88, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 8, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 4, fill: "var(--color-firefox)" },
+],
   },
 
   //400-level courses
@@ -221,7 +295,13 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["CS 211"],
     resources: ["N/A"],
-    difficulty: 5,
+    gradeData: [
+    { browser: "chrome", visitors: 30, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 43.3, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 18.3, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 6.7, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 1.7, fill: "var(--color-other)" },
+],
   },
   {
     id: 15,
@@ -234,7 +314,9 @@ export const classData = [
     career_tracks: ["None Specified"],
     prereqs: ["N/A"],
     resources: ["N/A"],
-    difficulty: 1,
+    gradeData: [
+    { browser: "chrome", visitors: 100, fill: "var(--color-chrome)" },
+],
   },
 
 
