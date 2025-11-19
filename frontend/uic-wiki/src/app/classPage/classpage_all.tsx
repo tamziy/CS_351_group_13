@@ -227,9 +227,9 @@ function ChartPieLabelList() {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="[&_.recharts-text]:fill-background mx-auto aspect-square max-h-[300px]"
+          className="[&_.recharts-text]:fill-background mx-auto aspect-square max-h-[400px]"
         >
-          <PieChart width={300} height={300}>
+          <PieChart>
             <ChartTooltip
               content={<ChartTooltipContent nameKey="visitors" hideLabel />}
             />
