@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from "react";
 import React from 'react';
+import Link from "next/link";
 
 import classIcon1 from '../assets/images/cs111.png';
 import classIcon2 from '../assets/images/cs141.png';
@@ -19,20 +20,49 @@ import classIcon13 from '../assets/images/csXXX.png';
 import classIcon14 from '../assets/images/cs401.png';
 import classIcon15 from '../assets/images/cs499.png';
 import classIconNone from '../assets/images/csXXX.png';
+// import { AccordionDemo } from '../assets/images/accordion';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+import { TrendingUp } from "lucide-react"
+import { LabelList, Pie, PieChart } from "recharts"
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart"
+
+export const description = "A pie chart with a label list"
 
 
 interface ItemProps {
-    id: number;
-    courseNo: number;
-    classTitle: string;
-    classSummary: string;
-    reviews: string;
-    professors: string[];
-    credit_hours: number;
-    career_tracks: string[];
-    prereqs: string[];
-    resources: string[];
-    rating: string;
+  id: number;
+  courseNo: number;
+  classTitle: string;
+  classSummary: string;
+  reviews: string;
+  professors: string[];
+  credit_hours: number;
+  career_tracks: string[];
+  prereqs: string[];
+  resources: string[];
+  difficulty: number;
+  gradeData: ItemProps[];
+
 }
 
 interface MyComponentProps {
@@ -55,7 +85,7 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
   function ClassIcon() {
     let toUse;
     let dum = item.courseNo;
-    switch(dum) {
+    switch (dum) {
       case 111:
         toUse = classIcon1;
         break;
@@ -101,12 +131,6 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
       case 499:
         toUse = classIcon15;
         break;
-      // case 499:
-      //   toUse = classIcon16;
-      //   break;
-      // case 499:
-      //   toUse = classIcon17;
-      //   break;
       default:
         toUse = classIconNone;
     }
@@ -116,53 +140,237 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
     );
   }
 
+
+  function AccordionDemo() {
+    return (
+      <Accordion
+        type="single"
+        collapsible
+        className="w-full"
+        defaultValue="item-1"
+      >
+        <AccordionItem value="item-1">
+          <AccordionTrigger className="text-xl">Credit Hours</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+            <p className="text-lg">
+              {item.credit_hours}
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-2">
+          <AccordionTrigger className="text-xl">Class Difficulty</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+            <p className="text-lg">
+              {item.difficulty} out of 5
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-3">
+          <AccordionTrigger className="text-xl">Prerequisites</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+            <ClassLevel title="" codes={item.prereqs} color="from-red-400 to-red-500" />
+          </AccordionContent>
+        </AccordionItem>
+        {/* <AccordionItem value="item-5">
+          <AccordionTrigger className="text-xl">Grades</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+            <ChartPieLabel />
+          </AccordionContent>
+        </AccordionItem> */}
+        <AccordionItem value="item-4">
+          <AccordionTrigger className="text-xl">Current Professors</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+            <p className="text-lg">
+              {item.professors.join(" / ")}
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    )
+  }
+
+const chartData = item.gradeData
+
+const chartConfig = {
+  visitors: {
+    label: "Percent",
+  },
+  chrome: {
+    label: "A",
+    color: "var(--chart-1)",
+  },
+  safari: {
+    label: "B",
+    color: "var(--chart-2)",
+  },
+  firefox: {
+    label: "C",
+    color: "var(--chart-3)",
+  },
+  edge: {
+    label: "D",
+    color: "var(--chart-4)",
+  },
+  other: {
+    label: "F",
+    color: "var(--chart-5)",
+  },
+} satisfies ChartConfig
+
+function ChartPieLabelList() {
   return (
-        // const { id, description, timestamp, start_time, end_time, category, address, author, max_members, members } = event;
-    <main className="bg-gray-50 items-center min-h-screen text-black">
-      {/* <hr className="text-black"></hr> */}
-      <br></br>
-      <div className="grid grid-cols-[50%_20%] gap-6 justify-center">
-        <div className="p-4 rounded-2xl space-y-4">
-          <h1 className="text-5xl">CS {item.courseNo}</h1>
-          <br></br>
-          <div className="flex flex-row gap-4">
-          <ClassIcon />
-          <h2 className="text-2xl">{item.classTitle}</h2>
-          </div>
-          <div className="bg-[#faf9f9] p-4">
-            <p className="text-xl">Summary: </p>
-            <p className="text-lg">{item.classSummary}</p>
-          </div>
-          <div className="bg-[#faf9f9] p-4">
-            <h2 className="text-2xl">Reviews</h2>
-            <p className="text-lg p-4">{item.reviews}</p>
-          </div>
-          <div className="bg-[#faf9f9] p-4">
-            <h2 className="text-2xl">Professors</h2>
-            <p className="text-lg p-4">{item.professors}</p>
-          </div>
-          {/* <div className="bg-[#faf9f9] p-4">
-            <h2 className="text-2xl">Grade Distribution</h2>
-          </div> */}
+    <Card className="flex flex-col">
+      <CardHeader className="items-center pb-0">
+        <CardTitle>Grade Distribution</CardTitle>
+        <CardDescription>Last Semester: Spring 2025</CardDescription>
+      </CardHeader>
+      <CardContent className="flex-1 pb-0">
+        <ChartContainer
+          config={chartConfig}
+          className="[&_.recharts-text]:fill-background mx-auto aspect-square max-h-[400px]"
+        >
+          <PieChart>
+            <ChartTooltip
+              content={<ChartTooltipContent nameKey="visitors" hideLabel />}
+            />
+            <Pie data={chartData} dataKey="visitors">
+              <LabelList
+                dataKey="browser"
+                className="fill-background"
+                stroke="none"
+                fontSize={12}
+                formatter={(value: keyof typeof chartConfig) =>
+                  chartConfig[value]?.label
+                }
+              />
+            </Pie>
+          </PieChart>
+        </ChartContainer>
+      </CardContent>
+      {/* <CardFooter className="flex-col gap-2 text-sm">
+        <div className="flex items-center gap-2 leading-none font-medium">
+          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="bg-[#c4c4c4] rounded-2xl p-4 text-center h-screen">
-          <h2 className="text-2xl p-4">Credit Hours</h2>
-          <p className="text-lg p-4">{item.credit_hours}</p>
-          <hr></hr>
-          <h2 className="text-2xl p-4">Career Track</h2>
-          <p className="text-lg p-4">{item.career_tracks}</p>
-          <hr></hr>
-          <h2 className="text-2xl p-4">Prerequisites</h2>
-          <p className="text-lg p-4">{item.prereqs}</p>
-          <hr></hr>
-          <h2 className="text-2xl p-4">Resources</h2>
-          <p className="text-lg text-black p-4">{item.resources}</p>
-          <hr></hr>
+        <div className="text-muted-foreground leading-none">
+          Showing total visitors for the last 6 months
+        </div>
+      </CardFooter> */}
+    </Card>
+  )
+}
+
+
+
+
+  function ClassLevel({ title, codes, color }: { title: string; codes: string[]; color: string }) {
+    return (
+      <div>
+        <h3 className="font-medium mb-2">{title}</h3>
+        <div className="flex flex-wrap gap-3">
+          {codes.map((code) => {
+            const classNumber = code.split(" ")[1];
+            return (
+              <Link
+                key={code}
+                href={`/classes/${classNumber}`}
+                className={`px-4 py-2 rounded-xl text-white font-semibold bg-gradient-to-r ${color}`}
+              >
+                {code}
+              </Link>
+            );
+          })}
         </div>
       </div>
+    );
+  }
 
+  return (
+    // Wrapper holding everything
+    <main className="bg-gray-50 min-h-full text-black">
+      <div className="max-w-full mx-auto px-6 py-8">
+
+        {/* Class Name and Icon */}
+        <div className="flex gap-4 items-center mb-8">
+          <ClassIcon />
+          <h1 className="text-3xl"><b>{item.classTitle}</b></h1>
+        </div>
+        {/* Top Part: Class Description & Accordion */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-6">
+          {/* Class Description */}
+
+          {/* Accordion */}
+          <div className="lg:col-span-2">
+            <div className="bg-white p-6 rounded-2xl space-y-6">
+              <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
+                <h2 className="text-2xl">Summary:</h2>
+                <p className="text-md p-4">{item.classSummary}</p>
+              </div>
+              <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
+                <h2 className="text-2xl"><em>CS students say:</em></h2>
+                <p className="text-md p-4">&quot;{item.reviews}&quot;</p>
+              </div>
+            </div>
+          </div>
+          <div className="p-6 rounded-2xl">
+            <AccordionDemo />
+          </div>
+          <div className="p-6 rounded-2xl">
+            <ChartPieLabelList />
+          </div>
+
+        </div>
+        {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 space-y-6">
+            <div className="flex flex-row gap-4">
+            </div>
+            <br></br>
+            <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
+              <h2 className="text-2xl">Summary:</h2>
+              <p className="text-lg p-4">{item.classSummary}</p>
+            </div>
+            <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
+              <h2 className="text-2xl"><em>CS students say:</em></h2>
+              <p className="text-lg p-4">&quot;{item.reviews}&quot;</p>
+            </div>
+          </div>
+
+
+          <div className="lg:col-span-1">
+            <AccordionDemo />
+          </div>
+          <div>
+          </div> */}
+
+
+      </div>
     </main>
-  );
+
+  )
 }
 
 export default ClassPage;
+
+{/* <main className="bg-gray-50 min-h-full text-black">
+      <div className="grid grid-cols-[70%_20%] gap-6 justify-center">
+        <div className="p-4 rounded-2xl space-y-4 text-wrap">
+          <div className="flex flex-row gap-4">
+            <Icon />
+            <h1 className="text-3xl"><b>{item.Title}</b></h1>
+          </div>
+          <br></br>
+          <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
+            <h2 className="text-2xl">Summary:</h2>
+            <p className="text-lg p-4">{item.Summary}</p>
+          </div>
+          <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
+            <h2 className="text-2xl"><em>Review:</em></h2>
+            <p className="text-lg p-4">&quot;{item.reviews}&quot;</p>
+          </div>
+        </div>
+        <div className="mt-24">
+          <Accordion />
+        </div>
+        <div className="mt-24">
+          <ChartBar />  
+        </div>
+      </div> */}
