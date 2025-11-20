@@ -11,6 +11,9 @@ const FlowchartComponent = ({nodes, edges}) => {
         nodesConnectable={false}
         zoomOnScroll={false}
         panOnScroll={false}
+        panOnDrag={false}
+        zoomOnPinch={false}
+        zoomOnDoubleClick = {false}
         fitView
       >
         {/* <Background />
