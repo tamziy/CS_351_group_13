@@ -1,4 +1,4 @@
-import csv
+import json
 
 class CuckooHashTable:
     def __init__(self, size=11):
@@ -85,21 +85,11 @@ class CuckooHashTable:
 
         return None
 
-    def load_csv(self, filename):
-        with open(filename, mode="r", encoding="utf-8") as file:
-            reader = csv.DictReader(file)
+    def load_json(self, filename):
+        with open(filename, "r", encoding="utf-8") as file:
+            data = json.load(file)  # data is already a list of dicts
 
-            for row in reader:
-                row["id"] = int(row["id"])
-                row["courseNo"] = int(row["courseNo"])
-                row["credit_hours"] = int(row["credit_hours"])
-
-                row["professors"] = row["professors"].split("; ")
-                row["career_tracks"] = row["career_tracks"].split("; ")
-                row["prereqs"] = row["prereqs"].split("; ")
-                row["resources"] = row["resources"].split("; ")
-
+            for row in data:
                 key = f"CS {row['courseNo']}"
                 value = row
-
                 self.insert(key, value)

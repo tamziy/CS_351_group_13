@@ -11,7 +11,7 @@ trie = Trie()
 trie.getFromFile("classes.txt")
 
 table = CuckooHashTable()
-table.load_csv("courses.csv")
+table.load_json("courses.json")
 
 @app.route('/')
 def home():
