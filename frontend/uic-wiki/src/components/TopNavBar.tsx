@@ -32,7 +32,7 @@ export default function Navbar() {
           <Search className="w-4 h-4 text-black-800 mr-2" />
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Search Classes"
             value={value}
             onChange={onChange}
             className="bg-transparent outline-none text-sm text-black w-full"

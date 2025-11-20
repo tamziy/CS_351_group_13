@@ -59,7 +59,7 @@ export default function HomePage() {
         </section>
 
         {/* RIGHT: Info Panels */}
-        <aside className="w-72 space-y-4">
+        {/* <aside className="w-72 space-y-4">
           <InfoCard title="Updates" content="1 new notification on CS 401" />
           <InfoCard
             title="Discussion Forum"
@@ -73,7 +73,7 @@ export default function HomePage() {
             title="Syllabus Center"
             content="Check out every CS Course’s Syllabus!"
           />
-        </aside>
+        </aside> */}
       </div>
     </main>
   );
