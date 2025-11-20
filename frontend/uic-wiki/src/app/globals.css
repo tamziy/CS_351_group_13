@@ -122,5 +122,5 @@
 }
 
 .react-flow__node {
-  pointer-events: auto !important;
+  pointer-events: auto !important; 
 }
