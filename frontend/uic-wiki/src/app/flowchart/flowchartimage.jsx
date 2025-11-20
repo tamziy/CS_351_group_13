@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import FlowchartComponent from './flowchartcomponent';
-import Link from 'next/link';
+import Link from 'next/link';     
 
 function FlowchartImage() {
     const [nodes] = useState([
