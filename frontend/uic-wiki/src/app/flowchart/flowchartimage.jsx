@@ -1,34 +1,33 @@
 import React, { useState } from 'react';
 import FlowchartComponent from './flowchartcomponent';
-import { ArrowDownIcon } from 'lucide-react';
+import Link from 'next/link';
 
 function FlowchartImage() {
     const [nodes] = useState([
-        { id: '100level', data: { label: '100-Level' }, position: { x: -300, y: 160 }, style: {height: 40, width: 120, backgroundColor: 'white', color: 'black', fontSize: 16 }},
-        { id: '200level', data: { label: '200-Level' }, position: { x: -300, y: 300 }, style: {height: 40, width: 120, backgroundColor: 'white', color: 'black', fontSize: 16 }},
-        { id: '300level', data: { label: '300-Level' }, position: { x: -300, y: 400 }, style: {height: 40, width: 120, backgroundColor: 'white', color: 'black', fontSize: 16 }},
-        { id: '400level', data: { label: '400-Level' }, position: { x: -300, y: 500 }, style: {height: 40, width: 120, backgroundColor: 'white', color: 'black', fontSize: 16 }},
-        // { id: 'line', data: { label: ' ' }, position: { x: -300, y: 180 }, style: {height: 0, width: 900, color: 'black', padding: 0 }},
+        { id: '100level', data: { label: '100-Level' }, position: { x: -300, y: 160 }, style: {height: 40, width: 120, backgroundColor: 'lightcoral', color: 'black', fontSize: 16 }},
+        { id: '200level', data: { label: '200-Level' }, position: { x: -300, y: 300 }, style: {height: 40, width: 120, backgroundColor: 'lightblue', color: 'black', fontSize: 16 }},
+        { id: '300level', data: { label: '300-Level' }, position: { x: -300, y: 400 }, style: {height: 40, width: 120, backgroundColor: 'lightgreen', color: 'black', fontSize: 16 }},
+        { id: '400level', data: { label: '400-Level' }, position: { x: -300, y: 500 }, style: {height: 40, width: 120, backgroundColor: 'lightpink', color: 'black', fontSize: 16 }},
         { id: 'line2', data: { label: ' ' }, position: { x: -300, y: 280 }, style: {height: 0, width: 900, color: 'black', padding: 0 }},
         { id: 'line3', data: { label: ' ' }, position: { x: -300, y: 380 }, style: {height: 0, width: 900, color: 'black', padding: 0 }},
         { id: 'line4', data: { label: ' ' }, position: { x: -300, y: 480 }, style: {height: 0, width: 900, color: 'black', padding: 0 }},
-        { id: 'cs111', data: { label: 'CS 111' }, position: { x: 200, y: 100 }, style: {height: 40, width: 70, backgroundColor: 'lightcoral', color: 'black' }},
-        { id: 'cs141', data: { label: 'CS 141' }, position: { x: 100, y: 200 }, style: {height: 40, width: 70, backgroundColor: 'lightcoral', color: 'black' }},
-        { id: 'cs151', data: { label: 'CS 151' }, position: { x: 300, y: 200 }, style: {height: 40, width: 70, backgroundColor: 'lightcoral', color: 'black' }},
-        { id: 'cs211', data: { label: 'CS 211' }, position: { x: 50, y: 300 }, style: {height: 40, width: 70, backgroundColor: 'lightblue', color: 'black' }},
-        { id: 'cs251', data: { label: 'CS 251' }, position: { x: 150, y: 300 }, style: {height: 40, width: 70, backgroundColor: 'lightblue', color: 'black' }},
-        { id: 'cs261', data: { label: 'CS 261' }, position: { x: 250, y: 300 }, style: {height: 40, width: 70, backgroundColor: 'lightblue', color: 'black' }},
-        { id: 'cs277', data: { label: 'CS 277' }, position: { x: 350, y: 300 }, style: {height: 40, width: 70, backgroundColor: 'lightblue', color: 'black' }},
-        { id: 'cs301', data: { label: 'CS 301' }, position: { x: 0, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
-        { id: 'cs341', data: { label: 'CS 341' }, position: { x: 100, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
-        { id: 'cs342', data: { label: 'CS 342' }, position: { x: 200, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
-        { id: 'cs361', data: { label: 'CS 361' }, position: { x: 300, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
-        { id: 'cs362', data: { label: 'CS 362' }, position: { x: 400, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
-        { id: 'cs377', data: { label: 'CS 377' }, position: { x: 500, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
-        { id: 'cs401', data: { label: 'CS 401' }, position: { x: 100, y: 500 }, style: {height: 40, width: 70, backgroundColor: 'lightpink', color: 'black' }},
-        { id: 'cs499', data: { label: 'CS 499' }, position: { x: 200, y: 500 }, style: {height: 40, width: 70, backgroundColor: 'lightpink', color: 'black' }},
+        { id: 'cs111', data: { label: (<Link href = "/classes/111"> <span className = "cursor-pointer hover:underline">CS 111</span></Link>) }, position: { x: 200, y: 100 }, style: {height: 40, width: 70, backgroundColor: 'lightcoral', color: 'black' }},
+        { id: 'cs141', data: { label: (<Link href = "/classes/141"> <span className = "cursor-pointer hover:underline">CS 141</span></Link>) }, position: { x: 100, y: 200 }, style: {height: 40, width: 70, backgroundColor: 'lightcoral', color: 'black' }},
+        { id: 'cs151', data: { label: (<Link href = "/classes/151"> <span className = "cursor-pointer hover:underline">CS 151</span></Link>) }, position: { x: 300, y: 200 }, style: {height: 40, width: 70, backgroundColor: 'lightcoral', color: 'black' }},
+        { id: 'cs211', data: { label: (<Link href = "/classes/211"> <span className = "cursor-pointer hover:underline">CS 211</span></Link>) }, position: { x: 50, y: 300 }, style: {height: 40, width: 70, backgroundColor: 'lightblue', color: 'black' }},
+        { id: 'cs251', data: { label: (<Link href = "/classes/251"> <span className = "cursor-pointer hover:underline">CS 251</span></Link>) }, position: { x: 150, y: 300 }, style: {height: 40, width: 70, backgroundColor: 'lightblue', color: 'black' }},
+        { id: 'cs261', data: { label: (<Link href = "/classes/261"> <span className = "cursor-pointer hover:underline">CS 261</span></Link>) }, position: { x: 250, y: 300 }, style: {height: 40, width: 70, backgroundColor: 'lightblue', color: 'black' }},
+        { id: 'cs277', data: { label: (<Link href = "/classes/277"> <span className = "cursor-pointer hover:underline">CS 277</span></Link>) }, position: { x: 350, y: 300 }, style: {height: 40, width: 70, backgroundColor: 'lightblue', color: 'black' }},
+        { id: 'cs301', data: { label: (<Link href = "/classes/301"> <span className = "cursor-pointer hover:underline">CS 301</span></Link>) }, position: { x: 0, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
+        { id: 'cs341', data: { label: (<Link href = "/classes/341"> <span className = "cursor-pointer hover:underline">CS 341</span></Link>) }, position: { x: 100, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
+        { id: 'cs342', data: { label: (<Link href = "/classes/342"> <span className = "cursor-pointer hover:underline">CS 342</span></Link>) }, position: { x: 200, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
+        { id: 'cs361', data: { label: (<Link href = "/classes/361"> <span className = "cursor-pointer hover:underline">CS 361</span></Link>) }, position: { x: 300, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
+        { id: 'cs362', data: { label: (<Link href = "/classes/362"> <span className = "cursor-pointer hover:underline">CS 362</span></Link>) }, position: { x: 400, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
+        { id: 'cs377', data: { label: (<Link href = "/classes/377"> <span className = "cursor-pointer hover:underline">CS 377</span></Link>) }, position: { x: 500, y: 400 }, style: {height: 40, width: 70, backgroundColor: 'lightgreen', color: 'black' }},
+        { id: 'cs401', data: { label: (<Link href = "/classes/401"> <span className = "cursor-pointer hover:underline">CS 401</span></Link>) }, position: { x: 100, y: 500 }, style: {height: 40, width: 70, backgroundColor: 'lightpink', color: 'black' }},
+        { id: 'cs499', data: { label: (<Link href = "/classes/499"> <span className = "cursor-pointer hover:underline">CS 499</span></Link>) }, position: { x: 200, y: 500 }, style: {height: 40, width: 70, backgroundColor: 'lightpink', color: 'black' }},
         { id: 'engr100', data: { label: 'ENGR 100' }, position: { x: 50, y: 100 }, style: {height: 40, width: 90, backgroundColor: 'teal', color: 'black' }},
-        { id: 'math180', data: { label: 'MATH 180' }, position: { x: 200, y: 200 }, style: {height: 40, width: 80, backgroundColor: 'magenta', color: 'black' }},
+        { id: 'math180', data: { label: 'MATH 180' }, position: { x: 200, y: 200 }, style: {height: 40, width: 90, backgroundColor: 'magenta', color: 'black' }},
     ]);
 
     const [edges] = useState([
@@ -56,7 +55,7 @@ function FlowchartImage() {
 
     return (
         <div style = {{ width: '100%', height: '100%' }}>
-            <div style={{ position: 'absolute', top: 65, right: 50, zIndex: 10, backgroundColor: 'black', padding: '10px', border: '1px solid black', borderRadius: '5px' }}>
+            <div style={{ position: 'absolute', top: 165, right: 50, zIndex: 10, backgroundColor: 'white', padding: '15px', border: '1px solid black', borderRadius: '5px' }}>
                 <h4 style = {{ margin: '5px', fontSize: 18 }}>Legend</h4>
                 <div><span style = {{ borderBorrom: '2px dashed black'}}>---</span> Co-requisite</div>
                 <div><span style = {{ borderBorrom: '2px dashed black'}}>→</span> Prequisite</div>
