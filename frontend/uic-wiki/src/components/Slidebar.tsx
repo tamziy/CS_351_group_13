@@ -3,8 +3,15 @@
 import { Home, BookOpen, LayoutDashboard, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
+  const pathname = usePathname();
+
+  const linkClasses = (path: string) =>
+    `flex items-center gap-3 rounded-md p-2 
+     ${pathname === path ? "bg-gray-200 font-semibold" : "hover:bg-gray-100"}`;
+
   return (
     <aside className="flex flex-col w-64 bg-white border-r border-gray-200 p-6 text-black">
       {/* Logo Section */}
@@ -22,34 +29,17 @@ export default function Sidebar() {
 
       {/* Navigation */}
       <nav className="flex flex-col gap-3">
-        <Link
-          href="/"
-          className="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2"
-        >
+        <Link href="/" className={linkClasses("/")}>
           <Home className="w-5 h-5" />
           <span>Home</span>
         </Link>
 
-        <Link
-          href="/professors"
-          className="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2"
-        >
+        <Link href="/professors" className={linkClasses("/professors")}>
           <Users className="w-5 h-5" />
           <span>Professors</span>
         </Link>
 
-        <Link
-          href="/catalog"
-          className="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2"
-        >
-          <BookOpen className="w-5 h-5" />
-          <span>Class Catalog</span>
-        </Link>
-
-        <Link
-          href="/flowchart"
-          className="flex items-center gap-3 hover:bg-gray-100 rounded-md p-2"
-        >
+        <Link href="/flowchart" className={linkClasses("/flowchart")}>
           <LayoutDashboard className="w-5 h-5" />
           <span>Class Flowchart</span>
         </Link>
