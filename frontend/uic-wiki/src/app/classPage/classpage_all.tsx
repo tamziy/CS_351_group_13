@@ -77,7 +77,7 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
   const [loadingTaken, setLoadingTaken] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/") // Flask route
+    fetch("https://tamziy.pythonanywhere.com/") // Flask route
       .then((res) => res.json())
       .then((data) => setMessage(data.message))
       .catch((err) => {

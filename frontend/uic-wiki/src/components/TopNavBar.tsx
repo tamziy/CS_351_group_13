@@ -15,7 +15,7 @@ export default function Navbar() {
     setValue(val);
 
     if (val.length > 0){
-      const res = await fetch(`http://127.0.0.1:5000/suggest?q=${encodeURIComponent(val)}`);
+      const res = await fetch(`https://tamziy.pythonanywhere.com/suggest?q=${encodeURIComponent(val)}`);
       const data = await res.json();
       setSuggestions(data.suggestions)
     }
