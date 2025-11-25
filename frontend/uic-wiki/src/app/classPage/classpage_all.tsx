@@ -119,7 +119,7 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
 
   function ClassIcon() {
     let toUse;
-    let dum = item.courseNo;
+    const dum = item.courseNo;
     switch (dum) {
       case 111:
         toUse = classIcon1;

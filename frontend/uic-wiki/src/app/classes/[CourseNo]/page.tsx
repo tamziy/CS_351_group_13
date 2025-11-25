@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 export default function DynamicClassPage() {
   const params = useParams();
   const courseNo = Number(params.CourseNo);
-
+  
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [item, setItem] = useState(null as any);
   const [error, setError] = useState("");
 
