@@ -23,7 +23,7 @@ import classIcon13 from "../assets/images/csXXX.png";
 import classIcon14 from "../assets/images/cs401.png";
 import classIcon15 from "../assets/images/cs499.png";
 import classIconNone from "../assets/images/csXXX.png";
-// import { AccordionDemo } from '../assets/images/accordion';
+
 import {
   Accordion,
   AccordionContent,
