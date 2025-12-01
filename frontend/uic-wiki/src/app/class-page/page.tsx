@@ -58,6 +58,7 @@ interface ItemProps {
   classSummary: string;
   reviews: string;
   professors: string[];
+  prof_links: string[];
   credit_hours: number;
   career_tracks: string[];
   prereqs: string[];
@@ -175,6 +176,77 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
     );
   }
 
+
+const words = item.professors;
+
+const dum = item.courseNo;
+let links = ["#"];
+const prof_links_111 = ["https://cs.uic.edu/profiles/franke-baker/", "https://cs.uic.edu/profiles/gonzalo-bello/"];
+const prof_links_141 = ["https://cs.uic.edu/profiles/gu-zhaochen/"];
+const prof_links_151 = ["https://cs.uic.edu/profiles/dey-drishika/", "https://cs.uic.edu/profiles/ibrahim-omar/"];
+const prof_links_211 = ["https://cs.uic.edu/profiles/hodges-mark/", "https://cs.uic.edu/profiles/scott-reckinger/"];
+const prof_links_251 = ["https://cs.uic.edu/profiles/ayala-daniel/", "https://cs.uic.edu/profiles/mitchell-theys/"];
+const prof_links_261 = ["https://cs.uic.edu/profiles/koehler-adam/"];
+const prof_links_277 = ["https://cs.uic.edu/profiles/carson-jordan/", "https://cs.uic.edu/profiles/cody-cranch/"];
+const prof_links_301 = ["https://cs.uic.edu/profiles/katok-zoa/", "https://cs.uic.edu/profiles/gonzalo-bello/"];
+const prof_links_341 = ["https://cs.uic.edu/profiles/shanon-reckinger/"];
+const prof_links_342 = ["https://cs.uic.edu/profiles/hallenbeck-mark/"];
+const prof_links_361 = ["https://cs.uic.edu/profiles/maratos-george-2/"];
+const prof_links_362 = ["https://cs.uic.edu/profiles/evan-mccarty/"];
+const prof_links_377 = ["https://cs.uic.edu/profiles/emanuelle-burton/", "https://cs.uic.edu/profiles/clayville-kristel/"];
+const prof_links_401 = ["https://cs.uic.edu/profiles/ajay-kshemkalyani/", "https://cs.uic.edu/profiles/bhaskar-dasgupta/"];
+const prof_links_499 = ["https://cs.uic.edu/profiles/john-bell/"];
+
+switch (dum) {
+  case 111:
+    links = prof_links_111;
+    break;
+  case 141:
+    links = prof_links_141;
+    break;
+  case 151:
+    links = prof_links_151;
+    break;
+  case 211:
+    links = prof_links_211;
+    break;
+  case 251:
+    links = prof_links_251;
+    break;
+  case 261:
+    links = prof_links_261;
+    break;
+  case 277:
+    links = prof_links_277;
+    break;
+  case 301:
+    links = prof_links_301;
+    break;
+  case 341:
+    links = prof_links_341;
+    break;
+  case 342:
+    links = prof_links_342;
+    break;
+  case 361:
+    links = prof_links_361;
+    break;
+  case 362:
+    links = prof_links_362;
+    break;
+  case 377:
+    links = prof_links_377;
+    break;
+  case 401:
+    links = prof_links_401;
+    break;
+  case 499:
+    links = prof_links_499;
+    break;
+  default:
+    links = ["#"];
+  }
+
   function AccordionDemo() {
     return (
       <Accordion
@@ -207,18 +279,16 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
             />
           </AccordionContent>
         </AccordionItem>
-        {/* <AccordionItem value="item-5">
-          <AccordionTrigger className="text-xl">Grades</AccordionTrigger>
-          <AccordionContent className="flex flex-col gap-4 text-balance">
-            <ChartPieLabel />
-          </AccordionContent>
-        </AccordionItem> */}
         <AccordionItem value="item-4">
-          <AccordionTrigger className="text-xl">
-            Current Professors
-          </AccordionTrigger>
+          <AccordionTrigger className="text-xl">Current Professors</AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4 text-balance">
-            <p className="text-lg">{item.professors.join(" / ")}</p>
+            {words.map((word, index) => (
+              <a key={index} target="_blank"
+              href={links[index]}
+              className={`px-4 py-2 rounded-xl text-white font-semibold bg-gradient-to-r from-red-400 to-red-500`}>
+                {word}
+              </a>
+            ))}
           </AccordionContent>
         </AccordionItem>
       </Accordion>
@@ -283,14 +353,6 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
             </PieChart>
           </ChartContainer>
         </CardContent>
-        {/* <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex items-center gap-2 leading-none font-medium">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="text-muted-foreground leading-none">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter> */}
       </Card>
     );
   }
@@ -400,57 +462,9 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
             <ChartPieLabelList />
           </div>
         </div>
-        {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 space-y-6">
-            <div className="flex flex-row gap-4">
-            </div>
-            <br></br>
-            <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
-              <h2 className="text-2xl">Summary:</h2>
-              <p className="text-lg p-4">{item.classSummary}</p>
-            </div>
-            <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
-              <h2 className="text-2xl"><em>CS students say:</em></h2>
-              <p className="text-lg p-4">&quot;{item.reviews}&quot;</p>
-            </div>
-          </div>
-
-
-          <div className="lg:col-span-1">
-            <AccordionDemo />
-          </div>
-          <div>
-          </div> */}
       </div>
     </main>
   );
 };
 
 export default ClassPage;
-
-{
-  /* <main className="bg-gray-50 min-h-full text-black">
-      <div className="grid grid-cols-[70%_20%] gap-6 justify-center">
-        <div className="p-4 rounded-2xl space-y-4 text-wrap">
-          <div className="flex flex-row gap-4">
-            <Icon />
-            <h1 className="text-3xl"><b>{item.Title}</b></h1>
-          </div>
-          <br></br>
-          <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
-            <h2 className="text-2xl">Summary:</h2>
-            <p className="text-lg p-4">{item.Summary}</p>
-          </div>
-          <div className="bg-[#E0E0E0] p-4 rounded-3xl text-wrap">
-            <h2 className="text-2xl"><em>Review:</em></h2>
-            <p className="text-lg p-4">&quot;{item.reviews}&quot;</p>
-          </div>
-        </div>
-        <div className="mt-24">
-          <Accordion />
-        </div>
-        <div className="mt-24">
-          <ChartBar />  
-        </div>
-      </div> */
-}
