@@ -3,7 +3,7 @@
 ### 1. Clone the repository
 ```bash
 git clone <https://github.com/tamziy/CS_351_group_13>
-cd tvmate
+cd CS_351_group_13
 ```
 
 ### 2. Set up Virtual Environment
