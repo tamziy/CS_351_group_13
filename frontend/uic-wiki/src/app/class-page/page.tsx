@@ -22,6 +22,8 @@ import classIcon12 from "../assets/images/cs362.png";
 import classIcon13 from "../assets/images/csXXX.png";
 import classIcon14 from "../assets/images/cs401.png";
 import classIcon15 from "../assets/images/cs499.png";
+import classIcon16 from "../assets/images/engr100.png";
+import classIcon17 from "../assets/images/math180.png";
 import classIconNone from "../assets/images/csXXX.png";
 
 import {
@@ -167,6 +169,12 @@ const ClassPage: React.FC<MyComponentProps> = ({ item }) => {
       case 499:
         toUse = classIcon15;
         break;
+      case 100:
+        toUse = classIcon16;
+        break;
+      case 180:
+        toUse = classIcon17;
+        break;
       default:
         toUse = classIconNone;
     }
@@ -196,6 +204,7 @@ const prof_links_362 = ["https://cs.uic.edu/profiles/evan-mccarty/"];
 const prof_links_377 = ["https://cs.uic.edu/profiles/emanuelle-burton/", "https://cs.uic.edu/profiles/clayville-kristel/"];
 const prof_links_401 = ["https://cs.uic.edu/profiles/ajay-kshemkalyani/", "https://cs.uic.edu/profiles/bhaskar-dasgupta/"];
 const prof_links_499 = ["https://cs.uic.edu/profiles/john-bell/"];
+const prof_links_180 = ["https://mscs.uic.edu/profiles/wash/", "https://mscs.uic.edu/profiles/jbergen/"];
 
 switch (dum) {
   case 111:
@@ -242,6 +251,9 @@ switch (dum) {
     break;
   case 499:
     links = prof_links_499;
+    break;
+  case 180:
+    links = prof_links_180;
     break;
   default:
     links = ["#"];

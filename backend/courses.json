@@ -28,7 +28,7 @@
     "professors": ["Zhaochen Gu"],
     "credit_hours": 3,
     "career_tracks": ["None Specified"],
-    "prereqs": ["CS 111", "MATH 180 (N/A)"],
+    "prereqs": ["CS 111", "MATH 180"],
     "resources": ["N/A"],
     "difficulty": 3,
     "gradeData": [
@@ -48,7 +48,7 @@
     "professors": ["Drishika Dey", "Omar Ibrahim"],
     "credit_hours": 3,
     "career_tracks": ["None Specified"],
-    "prereqs": ["CS 111", "MATH 180 (N/A)"],
+    "prereqs": ["CS 111", "MATH 180"],
     "resources": ["N/A"],
     "difficulty": 2,
     "gradeData": [
@@ -287,6 +287,42 @@
     "difficulty": 1,
     "gradeData": [
       { "browser": "chrome", "visitors": 100, "fill": "#6050DC" }
+    ]
+  },
+  {
+    "id": 16,
+    "courseNo": 100,
+    "classTitle": "Engineering Success Seminar",
+    "classSummary": "A general orientation course on skills pertinent to students for successful completion of their undergraduate degree.",
+    "reviews": "N/A",
+    "professors": ["N/A"],
+    "credit_hours": 1,
+    "career_tracks": ["None Specified"],
+    "prereqs": ["N/A"],
+    "resources": ["N/A"],
+    "difficulty": 1,
+    "gradeData": [
+      { "browser": "chrome", "visitors": 100, "fill": "#6050DC" }
+    ]
+  },
+  {
+    "id": 17,
+    "courseNo": 180,
+    "classTitle": "Calculus I",
+    "classSummary": "Differentiation, curve sketching, maximum-minimum problems, related rates, mean-value theorem, antiderivative, Riemann integral, logarithm, and exponential functions.",
+    "reviews": "Lots of integrals and derivatives. It’s not that bad, just keep up with all the lectures and attended every discussion. Do all the practice problems in the discussion sheets and definitely study before the tests.",
+    "professors": ["Will Ash", "John Steenbergen"],
+    "credit_hours": 4,
+    "career_tracks": ["None Specified"],
+    "prereqs": ["N/A"],
+    "resources": ["N/A"],
+    "difficulty": 2,
+    "gradeData": [
+      { "browser": "chrome", "visitors": 26.8, "fill": "#6050DC" },
+      { "browser": "safari", "visitors": 39, "fill": "#D52DB7" },
+      { "browser": "firefox", "visitors": 17.1, "fill": "#FF2E7E" },
+      { "browser": "edge", "visitors": 12.2, "fill": "#FF6B45" },
+      { "browser": "other", "visitors": 4.9, "fill": "#FFAB05" }
     ]
   }
 ]

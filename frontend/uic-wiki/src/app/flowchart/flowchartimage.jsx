@@ -26,8 +26,8 @@ function FlowchartImage() {
         { id: 'cs377', data: { label: (<Link href = "/classes/377"> <span className = "cursor-pointer hover:underline">CS 377</span></Link>) }, position: { x: 500, y: 400 }, style: {height: 40, width: 70, backgroundColor: '#84A9FF', color: 'black' }},
         { id: 'cs401', data: { label: (<Link href = "/classes/401"> <span className = "cursor-pointer hover:underline">CS 401</span></Link>) }, position: { x: 100, y: 500 }, style: {height: 40, width: 70, backgroundColor: '#3366FF', color: 'black' }},
         { id: 'cs499', data: { label: (<Link href = "/classes/499"> <span className = "cursor-pointer hover:underline">CS 499</span></Link>) }, position: { x: 200, y: 500 }, style: {height: 40, width: 70, backgroundColor: '#3366FF', color: 'black' }},
-        { id: 'engr100', data: { label: 'ENGR 100' }, position: { x: 50, y: 100 }, style: {height: 40, width: 90, backgroundColor: 'lightgrey', color: 'black' }},
-        { id: 'math180', data: { label: 'MATH 180' }, position: { x: 200, y: 200 }, style: {height: 40, width: 90, backgroundColor: 'lightgrey', color: 'black' }},
+        { id: 'engr100', data: { label: (<Link href="/classes/100"><span className="cursor-pointer hover:underline">ENGR 100</span></Link>) }, position: { x: 50, y: 100 }, style: { height: 40, width: 90, backgroundColor: 'lightgrey', color: 'black' }},
+        { id: 'math180', data: { label: (<Link href="/classes/180"><span className="cursor-pointer hover:underline">MATH 180</span></Link>) }, position: { x: 200, y: 200 }, style: { height: 40, width: 90, backgroundColor: 'lightgrey', color: 'black' }}
     ]);
 
     const [edges] = useState([

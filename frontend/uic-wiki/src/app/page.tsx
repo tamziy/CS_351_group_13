@@ -2,11 +2,15 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { auth } from "@/firebase";
+import { auth, db } from "@/firebase";
+import { collection, getDocs } from "firebase/firestore";
 import { onAuthStateChanged, User } from "firebase/auth";
 
 export default function HomePage() {
   const [user, setUser] = useState<User | null>(null);
+  const [takenClasses, setTakenClasses] = useState<string[]>([]);
+  const [loadingTaken, setLoadingTaken] = useState(true);
+
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (currentUser) => {
@@ -14,6 +18,37 @@ export default function HomePage() {
     });
     return () => unsub();
   }, []);
+
+  // figure out user taken classes
+  useEffect(() => {
+  const unsub = auth.onAuthStateChanged(async (user) => {
+    console.log("Auth state changed:", user);
+
+    if (!user) {
+      setTakenClasses([]);
+      setLoadingTaken(false);
+      return;
+    }
+
+    const ref = collection(db, "users", user.uid, "takenClasses");
+
+    try {
+      const snap = await getDocs(ref);
+      console.log("Firestore docs found:", snap.size);
+
+      const list = snap.docs.map((doc) => doc.id); // course numbers as strings
+      setTakenClasses(list);
+
+    } catch (err) {
+      console.error("Firestore error:", err);
+    }
+
+    setLoadingTaken(false);
+  });
+
+  return () => unsub();
+}, []); // <-- EMPTY dependency array is correct!
+
 
   return (
     <main className="p-6 text-black">
@@ -31,12 +66,14 @@ export default function HomePage() {
             <ClassLevel
               title="100 Level CS"
               codes={["CS 111", "CS 141", "CS 151"]}
-              color="from-pink-400 to-pink-500"
+              color="#f0f6ff"
+              takenClasses={takenClasses}
             />
             <ClassLevel
               title="200 Level CS"
               codes={["CS 211", "CS 251", "CS 261", "CS 277"]}
-              color="from-orange-400 to-orange-500"
+              color="#D6E4FF"
+              takenClasses={takenClasses}
             />
             <ClassLevel
               title="300 Level CS"
@@ -48,12 +85,14 @@ export default function HomePage() {
                 "CS 362",
                 "CS 377",
               ]}
-              color="from-purple-500 to-purple-700"
+              color="#84A9FF"
+              takenClasses={takenClasses}
             />
             <ClassLevel
               title="400 Level CS"
               codes={["CS 401", "CS 499"]}
-              color="from-green-500 to-green-600"
+              color="#3366FF"
+              takenClasses={takenClasses}
             />
           </div>
         </section>
@@ -83,10 +122,12 @@ function ClassLevel({
   title,
   codes,
   color,
+  takenClasses
 }: {
   title: string;
   codes: string[];
   color: string;
+  takenClasses: string[];
 }) {
   return (
     <div>
@@ -94,11 +135,16 @@ function ClassLevel({
       <div className="flex flex-wrap gap-3">
         {codes.map((code) => {
           const classNumber = code.split(" ")[1];
+          const isTaken = takenClasses.includes(classNumber);
           return (
             <Link
               key={code}
               href={`/classes/${classNumber}`}
-              className={`px-4 py-2 rounded-xl text-white font-semibold bg-gradient-to-r ${color}`}
+              className="px-4 py-2 rounded-xl text-gray-800 font-semibold"
+              style={{ 
+                backgroundColor: isTaken ? "#388E3C" : color, 
+                color: isTaken ? "white" : "#000000",
+              }}
             >
               {code}
             </Link>
