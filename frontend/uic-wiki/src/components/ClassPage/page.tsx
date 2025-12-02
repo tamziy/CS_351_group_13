@@ -7,6 +7,7 @@ import Link from "next/link";
 import { auth, db } from "@/firebase";
 import { doc, getDoc, setDoc, deleteDoc } from "firebase/firestore";
 
+
 import classIcon1 from "../assets/images/cs111.png";
 import classIcon2 from "../assets/images/cs141.png";
 import classIcon3 from "../assets/images/cs151.png";

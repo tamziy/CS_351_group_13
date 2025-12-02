@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import ClassPage from "../../class-page/page";
+import ClassPage from "../../../components/ClassPage/page";
 import { useEffect, useState } from "react";
 
 export default function DynamicClassPage() {
