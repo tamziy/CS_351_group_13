@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import FlowchartComponent from './flowchartcomponent';
 import Link from 'next/link';     
 
+// can be reused
 function FlowchartImage() {
     const [nodes] = useState([
         { id: '100level', data: { label: '100-Level' }, position: { x: -300, y: 160 }, style: {height: 40, width: 120, backgroundColor: '#F0F6FF', color: 'black', fontSize: 16 }},
